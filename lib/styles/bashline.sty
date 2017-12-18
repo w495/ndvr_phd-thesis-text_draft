@@ -1,0 +1,70 @@
+% !TeX encoding = UTF-8
+\ProvidesPackage{.local/lib/styles/bashline}[2016/10/24 v. 0.1]
+
+\usepackage{trimspaces}
+
+
+\makeatletter
+    \protected@edef\@bashline@file@name#1{%
+        /tmp/${USER}-${HOSTNAME}-\jobname-#1.tex%
+    }
+    \newread\@bashline@file
+    \DeclareRobustCommand{\@bashline@command@one}[2]{%
+        \immediate\write18{#2 > \@bashline@file@name{#1}}%
+        \openin\@bashline@file=\@bashline@file@name{#1}
+        % The group localizes the change to \endlinechar
+        \bgroup%
+            \endlinechar=-1%
+            \read\@bashline@file to \localline%
+            % Since everything in the group is local, 
+            % we have to explicitly make the assignment global
+            \global\let\@bashline@result\localline%
+        \egroup%
+        \closein\@bashline@file%
+        % Clean up after ourselves
+        \immediate\write18{rm \@bashline@file@name{#1}}%
+        \@bashline@result%
+    }
+    \DeclareRobustCommand{\@bashline@command@many}[2]{%
+        \immediate\write18{#2 > \@bashline@file@name{#1}}%
+        \openin\@bashline@file=\@bashline@file@name{#1}
+        % The group localizes the change to \endlinechar
+        \bgroup
+            \endlinechar=-1
+            \noindent
+            \loop\unless\ifeof\@bashline@file 
+                \read\@bashline@file to \localline%
+                0 \localline 1%
+                \newline%
+            \repeat
+        \egroup
+        \closein\@bashline@file
+        % Clean up after ourselves
+        \immediate\write18{rm \@bashline@file@name{#1}}
+    }
+    \DeclareRobustCommand{\bashline}[2][bashline]{%
+        \@bashline@command@one{#1}{#2}%
+    }
+    \DeclareRobustCommand{\bashlines}[2][bashline]{%
+        \@bashline@command@many{#1}{#2}%
+    }
+
+    \DeclareRobustCommand{\urandomstring}[1]{%
+        \bashline%
+        {cat /dev/urandom | tr -dc "A-Za-z0-9" | fold -c#1 | head -1}%
+    }
+
+    \DeclareRobustCommand{\bashdate}{%
+        \texorpdfstring{\bashline{date --iso-8601}}{ \today }%
+    }
+
+    \DeclareRobustCommand{\bashdatetime}{%
+        \bashline{date --iso-8601=seconds}%
+    }
+    \DeclareRobustCommand{\bashe1}{%
+        \bashline{date --iso-8601=seconds}%
+    }
+\makeatother
+
+
+%\endinput

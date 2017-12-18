@@ -1,0 +1,25 @@
+% !TeX encoding = UTF-8
+
+%%%
+%%% определение и настрока всевозможных теорем и определений
+%%%
+%% теореммы:
+
+\usepackage{amsthm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section] 
+\newtheorem{statement}{Утверждение}[section] 
+\newtheorem{lemma}{Лемма}[section] 
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Определение} % definition numbers are dependent on theorem numbers
+
+
+\newcommand{\define}[2]{ \textbf{#1}~---~{#2}  }
+
+%% Пометка:
+\newcommand{\note}[1]{ \begin{quote} \textcolor{gray}{#1} \end{quote} }
+
+%% Пример:
+\newcommand{\example}[2]{ \paragraph[#1]{ \comic Пример (#1)} \par #2}

@@ -1,0 +1,41 @@
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+   Начальные кадры событий из начала мультфильма «Дядя Стёпа~—~милиционер»%
+}
+
+\textwidth=28cm
+
+
+\newcommand{\epath}{.local/img/video/events}
+
+\newcommand{\eventexample}[1]{
+    \includegraphics[width=3.0cm]{\epath/Djadja-Stepa-Milicioner-#1.png}
+}
+
+\begin{document}
+ \sf
+    \tikzstyle{framef} = [
+        rectangle, rounded corners,
+        very thick,
+        minimum size=4em,
+        fill=yellow!10,
+        draw=gray!85,
+    ]
+    \tikzstyle{arrowf} = [
+        -latex,ultra thick,black!85,
+    ]
+    \begin{tikzpicture}[very thick,node distance=8em]
+
+        \node[framef,]                    (tf1) 
+            {\raisebox{-.4\height}{\eventexample{1}}};
+        \node[framef,right of=tf1] (tf2) 
+            {\raisebox{-.4\height}{\eventexample{2}}};
+        \node[framef,right of=tf2] (tf3) 
+            {\raisebox{-.4\height}{\eventexample{3}}};
+
+        \path[arrowf] (tf1) edge (tf2);
+        \path[arrowf] (tf2) edge (tf3);
+    \end{tikzpicture}
+\end{document}
+

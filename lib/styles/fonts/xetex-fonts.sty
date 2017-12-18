@@ -1,0 +1,58 @@
+% !TeX root = ../fonts.sty
+% !TeX encoding = UTF-8
+
+\usepackage{fontspec}
+
+
+%\usepackage{xunicode}
+\usepackage{xltxtra} % \XeLaTeX macro
+
+\defaultfontfeatures{
+    Mapping=tex-text,%
+    Ligatures=TeX%
+}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[
+    babelshorthands=true,
+    spelling=modern,
+]{russian}
+
+%\setmainlanguage{russian}
+\setotherlanguage[
+    variant=usmax
+]{english}
+
+% \newcommand{\sethyphenation}[2]{%
+%   \AtBeginDocument{%
+%     \begin{otherlanguage*}{#1}\hyphenation{#2}\end{otherlanguage*}%
+%   }%
+% }
+
+% \sethyphenation{english}{wave-guide}
+
+
+%%  The Main Font
+\newfontfamily{\russianfont}{Times New Roman}
+\newfontfamily{\englishfont}{Times New Roman}
+\setmainfont{Times New Roman}
+
+%%  The Roman Font
+\newfontfamily{\russianfonttt}{Liberation Mono}
+\newfontfamily{\englishfonttt}{Liberation Mono}
+\setromanfont{Liberation Mono}
+
+
+%%  The Sans Font
+\setsansfont{Calibri}
+
+%%  The Mono Font
+\setmonofont[Color={0019D4}]{Liberation Mono}
+
+
+\newcommand*{\cp}[1]{#1}
+
+%%  The Math Font
+\usepackage{.local/lib/styles/fonts/unicode-math-font}
+
+

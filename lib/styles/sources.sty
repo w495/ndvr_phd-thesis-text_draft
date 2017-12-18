@@ -1,0 +1,138 @@
+% !TeX encoding = UTF-8
+
+
+%%%
+%%% подключение и настройка пакета листингов (verbatim)
+%%%
+
+% Подключаем пакет с расширением окружения verbatim.
+\usepackage{verbatim}
+
+% Подключаем пакет для короткой вставки выражений типа verbatim.
+\usepackage{shortvrb}
+
+
+\usepackage[
+    outputdir=/tmp/latexmk/vec,
+    cachedir=.
+]{minted}
+
+\renewcommand{\theFancyVerbLine}{%
+    \sffamily%
+    \textcolor{gray}{%
+        \squelch{%
+            \arabic{FancyVerbLine}%
+        }%
+    }%
+}
+
+\setminted[python]{
+    linenos,
+    numbersep=0.5em,
+    xleftmargin=2em,
+    stripnl=true,
+    gobble=8,
+    frame=lines,
+    curlyquotes=true,
+    style=tango,
+    frame=single,
+    framesep=3mm
+}
+
+
+\setminted[bash]{
+    %linenos,
+    %numbersep=0.5em,
+    %xleftmargin=0em,
+    stripnl=true,
+    gobble=8,
+    frame=lines,
+    %curlyquotes=true,
+    breaklines=true,
+    style=tango,
+    frame=single,
+    framesep=3mm
+}
+
+
+%%%
+%%% подключение и настройка пакета listings
+%%%
+\usepackage{listings}
+
+%%%
+%%% настройка
+%%%
+
+\newcommand{\CommonBasicStyle}{
+    \footnotesize
+}
+
+\newcommand{\CommonCommentStyle}{
+    \sffamily\itshape\color{teal!50!black}
+}
+
+\newcommand{\cmnt}{\CommonCommentStyle}
+
+\newcommand{\CommonKeywordStyle}{
+    \bf\color{blue}
+}
+
+\newcommand{\CommonStringStyle}{
+    \color{violet}
+}
+
+
+\lstset{
+    frame               =   single,
+    %columns             =   fullflexible,
+    inputencoding       =   utf8x,
+    flexiblecolumns     =   true,
+    breaklines          =   true,
+    extendedchars       =   true,
+    keepspaces          =   true,
+    belowcaptionskip    =   0pt,
+    backgroundcolor=\color{white},
+    xleftmargin         =   30pt,
+    %resetmargins=true,
+    %framexleftmargin=30pt,
+    %linewidth=0.8\linewidth
+}
+
+\lstset{
+    numbers=left,
+    numberstyle=\footnotesize\color{gray},
+}
+
+\lstset{
+    basicstyle=\CommonBasicStyle,
+}
+
+\lstset{
+    commentstyle=\CommonCommentStyle,
+}
+
+\lstset{
+    keywordstyle=\CommonKeywordStyle,
+}
+
+\lstset{
+    stringstyle=\CommonStringStyle,
+    morestring=[b]",
+    morestring=[b]',
+    morestring=[d]
+}
+
+%%%
+%%% определение собственных языков
+%%%
+
+\usepackage{.local/lib/styles/sources/ConfigNet}
+\usepackage{.local/lib/styles/sources/CSharp}
+\usepackage{.local/lib/styles/sources/FilterPython}
+\usepackage{.local/lib/styles/sources/FFmpegBash}
+
+
+
+
+

@@ -1,0 +1,208 @@
+
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Темпоральная модель визуального потока видео%
+}
+
+\textwidth=40cm
+
+\begin{document}
+
+    %% My Types
+
+    \newcommand{\umldtp}[1]{\textsf{#1}}
+    \newcommand{\umlctp}[1]{\textsl{$\star$ #1}}
+    \newcommand{\umlfld}[1]{\textsf{#1}}
+
+
+    %% Tabular Styling
+
+    \newcolumntype{F}[1]{>{\raggedleft\arraybackslash}m{#1}}
+    \newcolumntype{T}[1]{>{\raggedright\arraybackslash}m{#1}}
+
+    \setlength\dashlinedash{0.2pt}
+    \setlength\dashlinegap{2.5pt}
+    \setlength\arrayrulewidth{0.2pt}
+
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{0.1em}
+
+
+    \colorlet{commonClass}{yellow!10}
+    \colorlet{commonNote}{green!10}
+    \colorlet{commonDraw}{lightgray}
+
+    \colorlet{emphClass}{yellow!20}
+    \colorlet{emphDraw}{black}
+
+
+    \tikzstyle{tikzuml transition style}=[%
+        color=\tikzumlDefaultDrawColor,%
+        very thick,% 
+        rounded corners,% 
+        -angle 45%
+    ]%
+
+
+    %% Main Part
+
+    \sf\singlespacing
+    \begin{tikzpicture}[
+        very thick,
+        node distance=8em,
+    ]
+
+        \umlstateinitial[y=0,name=Init]
+
+        \begin{umlstate}[
+            name=Physical,
+            y=-6,
+            fill=commonClass,
+        ]{Физическое представление видео}
+        \end{umlstate}
+        \umltrans
+            {Init}
+            {Physical}
+
+        \begin{umlstate}[
+            name=Numerical,
+            y=-12,
+            fill=commonClass,
+        ]{Численное представление видео}
+        \end{umlstate}
+        \umltrans
+            {Physical}
+            {Numerical}
+
+        \begin{umlstate}[
+            name=Segments,
+            y=-18,
+            fill=commonClass,
+        ]{Сегменты}
+            \begin{umlstate}[
+                name=Key-frames,
+                x=-5,
+            ]{Ключевые кадры}
+            \end{umlstate}
+            \begin{umlstate}[
+                name=Shots,
+                x=0,
+            ]{Cъёмки}
+            \end{umlstate}
+            \begin{umlstate}[
+                name=Scenes,
+                x=5, 
+            ]{Сцены}
+            \end{umlstate}
+        \end{umlstate}
+        \umltrans[
+            arg1={Сегментация}
+        ]
+            {Numerical}
+            {Segments}
+
+        \begin{umlstate}[
+            name=Features,
+            fill=commonClass,
+            y=-24
+        ]{Сегменты}
+            \begin{umlstate}[
+                name=Frames1,
+                x=-5,
+            ]{Кадры 1}
+            \end{umlstate}
+            \begin{umlstate}[
+                name=Frames,
+                x=0,
+            ]{Кадры 1}
+            \end{umlstate}
+            \begin{umlstate}[
+                name=ZFrames,
+                x=5, 
+            ]{Кадры 2}
+            \end{umlstate}
+        \end{umlstate}
+        \umltrans[
+            arg={Выборка характеристик}
+        ]
+            {Segments}
+            {Features}
+
+        \begin{umlstate}[
+            name=Information,
+            fill=commonClass,
+            y=-30
+        ]{Сегменты}
+            \begin{umlstate}[
+                name=Frames1,
+                x=-5,
+            ]{Кадры 1}
+            \end{umlstate}
+            \begin{umlstate}[
+                name=Frames,
+                x=0,
+            ]{Кадры 1}
+            \end{umlstate}
+            \begin{umlstate}[
+                name=ZFrames,
+                x=5, 
+            ]{Кадры 2}
+            \end{umlstate}
+        \end{umlstate}
+        \umltrans[
+            arg={Извлечение информации}
+        ]
+            {Features}
+            {Information}
+            
+        % \umlstateinitial[name=init]
+        % \begin{umlstate}[
+        %     name=Video, 
+        %     x=0, y=0,
+        % ]{Видео}
+        % \end{umlstate}
+
+        % % \begin{umlstate}[
+        % %     name=Features, 
+        % %     x=3, y=0,
+        % %     ]{Характеристики}
+        % % \end{umlstate}
+        % % \begin{umlstate}[
+        % %     name=Information, 
+        % %     x=4, y=0,
+        % % ]{Информация}
+        % % \end{umlstate}
+
+
+    % \begin{umlstate}[name=Amain]{Etat global de l'objet A}
+    %     \begin{umlstate}[name=Bgraph, fill=red!20]{graphe B}
+    %         \umlstateinitial[name=Binit]
+    %         \umlbasicstate[y=-4, name=test1, fill=white]{test1}
+    %         \umltrans{Binit}{test1}
+    %         \umltrans[recursive=20|60|2.5cm, recursive direction=right to top, arg={op1}, pos=1.5]{test1}{test1}
+    %         \umltrans[recursive=160|120|2.5cm, recursive direction=left to top, arg={op2}, pos=1.5]{test1}{test1}
+    %         \umltrans[recursive=-160|-120|2.5cm, recursive direction=left to bottom, arg={op3}, pos=1.5]{test1}{test1}
+    %         \umltrans[recursive=-20|-60|2.5cm, recursive direction=right to bottom, arg={op4}, pos=1.5]{test1}{test1}
+    %         \umlbasicstate[y=-8, name=test2, fill=white]{test2}
+    %         \umltrans[recursive=-160|-120|2.5cm, recursive direction=left to bottom, arg={op5}, pos=1.5]{test2}{test2}
+    %         \umltrans{test1}{test2}
+    %         \umlstatefinal[x=3, y=-7.75, name=Bfinal]
+    %         \umltrans{test2}{Bfinal}
+    %     \end{umlstate}
+    %     \umlstateinitial[x=6, y=1, name=Ainit]
+    %     \umlVHtrans[anchor2=40]{Ainit}{Bgraph}
+    %     \umlstatefinal[x=6, y=-3.5, name=Afinal]
+    %     \umlHVtrans[anchor1=30]{Bgraph}{Afinal}
+    %     \umlbasicstate[x=6, y=-6, name=visu, fill=green!20]{Visualisation}
+    %     \umlHVtrans{Bfinal}{visu}
+    %     \umltrans{visu}{Afinal}
+    %     \umltrans[recursive=-20|-60|2.5cm, recursive direction=right to bottom, arg=a, pos=1.5]{visu}{visu}
+    % \end{umlstate}
+
+
+
+
+    \end{tikzpicture}
+\end{document}
+

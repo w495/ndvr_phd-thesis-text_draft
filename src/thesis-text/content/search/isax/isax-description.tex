@@ -1,0 +1,57 @@
+%& -shell-escape
+% !TeX root = thesis-abstract.tex
+% !TeX encoding = UTF-8
+% !TeX program = XeLaTeX
+
+\documentclass{.local/lib/classes/ndvr-super-article-standalone}
+
+\begin{document}
+    
+    Выбранная сигнатура представляет собой временной ряд.
+    Существует большое количество алгоритмов для индексации
+    и поиска временных рядов.
+    В работе предлагается модифицированный вариант 
+    алгоритма \textit{$\iSAX{2.0}$}\footnote{
+        A. Camerra, T. Palpanas, J. Shieh, and E. Keogh. 
+        iSax2.0: Indexing and mining one billion time series. 
+        In ICDM, pages 58–67, 2010.
+    }.
+    Алгоритм $\iSAX{2.0}$ — улучшенная модификация алгоритма
+    $\iSAX$\footnote{
+        J. Shieh and E. Keogh. 
+        iSax: Indexing and mining terabyte sized time series. 
+        In SIGKDD, pages 623–631, 2008.
+    },
+    который основан на алгоритме 
+    $\SAX$\footnote{
+        J. Lin, E. Keogh, S. Lonardi, and B. Chiu, 
+        A Symbolic Representation of Time Series, 
+        with Implications for Streaming Algorithms, 
+        Workshop on Research Issues in Data Mining and
+        Knowledge Discovery, 
+        the 8th ACM SIGMOD. San Diego, CA, 2003. 
+    }.
+
+    Алгоритмы 
+    $\SAX$\footnote{
+        $\SAX$ —  \textbf{S}ymbolic \textbf{A}ggregate  
+        Appro\textbf{X}imation. 
+        Перевод с английского: 
+        «Символьная агрегатная аппроксимация».
+    }
+    и
+    $\iSAX$\footnote{
+        $\iSAX$ — \textbf{I}ndexable \textbf{S}ymbolic 
+        \textbf{A}ggregate  Appro\textbf{X}imation.
+        Перевод с английского 
+        «Индексируемая символьная агрегатная аппроксимация».
+    } 
+    используют кусочно-агрегатную аппроксимацию 
+    временного ряда. Каждый временной ряд представляется
+    как последовательность символов.
+    При переходе к символьной форме временной ряд 
+    претерпевает дискретизацию и квантование.
+    Границы квантования определяются в~соответствии 
+    со стандартным нормальным распределением.
+
+\end{document}

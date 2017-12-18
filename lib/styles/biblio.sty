@@ -1,0 +1,50 @@
+
+% !TeX encoding = UTF-8
+
+% \usepackage[numbers,sort&compress]{natbib}
+% \usepackage{hypernat}
+
+\makeatletter
+	\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
+
+
+\newcommand{\plainbiblio}[2]{
+    \phantomsection
+    \renewcommand{\refname}{#1}
+    \bibliographystyle{ugost2008ls}
+    \bibliography{#1}
+}
+
+\newcommand{\biblio}[2]{
+    \phantomsection
+    \renewcommand{\refname}{#1}
+    \addcontentsline{toc}{section}{#1}
+    \plainbiblio{#2}
+}
+
+% \usepackage{multibib}
+% % only with multibib
+% \newcites{vak,common}{,}%
+% \bibliographystylevak{ugost2008ls}%
+% \bibliographystylecommon{ugost2008ls}%
+% \newcommand{\rebiblio}[1]{\csname bibliography#1\endcsname}%
+% \newcommand{\bibliopart}[2]{
+%     \subsection{#2}%
+%     \renewcommand{\section}[2]{}%
+%     \rebiblio{#1}{#1}%
+% }%
+
+
+
+
+\usepackage{bibtopic}
+
+\bibliographystyle{ugost2008ls}
+
+
+
+
+
+
+

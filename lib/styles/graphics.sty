@@ -1,0 +1,148 @@
+% !TeX encoding = UTF-8
+
+% -------------------------------------------------------
+% Картинки
+% -------------------------------------------------------
+
+\usepackage{float}
+
+\usepackage{graphicx}
+\usepackage{epsfig}
+
+%\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+\renewcommand{\thefigure}{\arabic{figure}}
+
+
+% Keeps floats `in their place', preventing them \\
+% from floating past a "\FloatBarrier" 
+% command into another section.  
+% The floats should not move
+% past every "\section".
+\usepackage[section]{placeins}
+
+% Useful for individually placing figures on a separate page with
+% \afterpage{\clearpage \begin{figure}[p] ... }
+\usepackage{afterpage}
+
+
+
+
+
+\captionsetup[figure]{
+    skip=12pt,%
+    justification=centering,%
+    textfont={sf},%
+    labelfont={sf},%
+    singlelinecheck=false%
+}% 
+
+
+\newcommand{\forigtext}[1]{%
+    {\large<<}{\magic#1}{\large>>}.%
+}
+
+\newcommand{\forigtitle}[1]{
+    %{\sf \small Заголовок:~\forigtext{#1}}
+}
+
+\newcommand{\forigtitletr}[1]{%
+    \forigtext{#1}%
+}
+
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+
+
+
+
+
+% -------------------------------------------------------
+% Векторные рисунки
+% -------------------------------------------------------
+    \usepackage{pspicture}
+    \usepackage{pst-plot,pstricks-add}
+    %\usepackage{pstricks,pst-node,pst-text,pst-3d,pst-grad}
+
+    \usepackage{etoolbox}
+
+
+
+    \usepackage{pgf,pgfsys,pgffor}
+    \usepackage{pgfplots}
+    \usepackage{pgfplotstable}
+    %\usepackage{pgfmath}
+    
+    \pgfplotsset{compat=1.8}
+    %\pgfplotsset{compat=newest,compat/show suggested version=false}
+    
+    \usetikzlibrary{patterns}
+
+    \usepackage{tikz}
+    \usepackage{tikz-cd}
+
+    \usepackage{tkz-fct}
+
+    %\newcommand*{\tikzcdset}{\pgfqkeys{/tikz/commutative diagrams}}
+
+    \usepgfmodule{oo}
+
+
+    \usetikzlibrary{mindmap,trees}
+    \usetikzlibrary{snakes}
+    \usetikzlibrary{arrows,shapes,shadows,decorations}
+    \usetikzlibrary{decorations.pathreplacing}
+    \usetikzlibrary{decorations.pathmorphing}
+    \usetikzlibrary{calc,3d}
+    \usetikzlibrary{trees}
+    \usetikzlibrary{decorations.markings}
+    \usetikzlibrary{backgrounds}
+    \usetikzlibrary{chains,positioning,fit,shapes}
+
+
+    \colorlet{vlgray}{black!5}
+
+
+    \usepackage{.local/lib/deps/tikzuml/tikz-uml}
+
+
+    \newcommand{\cl}{cl}
+
+
+
+
+\newcommand{\tikzXmindmap}[1]{
+    \sf
+    \begin{tikzpicture}[very thick, scale=.93,
+            concept color=vlgray,
+            every node/.style={scale=.93},
+            outer sep=1pt
+        ]#1
+        \begin{scope}[
+            on background layer,
+            scale=1.0,
+            every node/.style={scale=1.0},
+            concept color=black!80
+        ]#1\end{scope}
+    \end{tikzpicture}
+}
+
+
+\newcommand{\tikzXmindmapTitle}[1]{
+    \sf
+    \begin{tikzpicture}[very thick, scale=.30,
+            concept color=white,
+            every node/.style={scale=.30},
+            outer sep=2pt
+        ]#1
+        \begin{scope}[
+            on background layer,
+            scale=1.0,
+            every node/.style={scale=0.35},
+            concept color=red
+        ]#1\end{scope}
+    \end{tikzpicture}
+}

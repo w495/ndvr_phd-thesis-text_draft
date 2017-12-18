@@ -1,0 +1,307 @@
+
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Логическая модель видео%
+}
+
+\textwidth=42cm
+
+\begin{document}
+
+    %% My Types
+
+    \newcommand{\umldtp}[1]{\textsf{#1}}
+    \newcommand{\umlctp}[1]{\textsl{#1}}
+    \newcommand{\umlfld}[1]{\textsf{#1}}
+
+
+    %% Tabular Styling
+
+    \newcolumntype{F}[1]{>{\raggedleft\arraybackslash}m{#1}}
+    \newcolumntype{T}[1]{>{\raggedright\arraybackslash}m{#1}}
+
+    \setlength\dashlinedash{0.2pt}
+    \setlength\dashlinegap{2.5pt}
+    \setlength\arrayrulewidth{0.2pt}
+
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{0.1em}
+
+
+    %% Tikz Uml Styling
+
+    \colorlet{commonClass}{yellow!10}
+    \colorlet{commonNote}{green!10}
+    \colorlet{commonDraw}{lightgray}
+
+    \colorlet{emphClass}{yellow!20}
+    \colorlet{emphDraw}{black}
+
+    \tikzumlset{
+        %font=\normalsize,
+        fill class=commonClass,
+        fill note=commonNote,
+        draw=commonDraw,
+    }
+
+    \tikzstyle{tikzuml inherit style}=[
+        color=black,
+        very thick,
+        {-{Stealth[inset=0pt,scale=1.5,fill=white,angle'=45]}}
+    ]
+    \tikzstyle{tikzuml aggregation style}=[
+        color=black,
+        very thick,
+        {{Diamond[scale=2,fill=white]}-}
+    ]
+    \tikzstyle{tikzuml composition style}=[
+        color=black,
+        very thick,
+        {{Diamond[scale=2,fill=gray!90]}-}
+    ]
+    \tikzstyle{tikzuml implements style}=[
+        color=black,
+        very thick,
+        {-{Stealth[inset=0pt,scale=1.5,fill=white,angle'=45]}}, 
+        dashed
+    ]
+    \tikzstyle{tikzuml implements style}=[
+        color=black,
+        very thick,
+        {-{Stealth[inset=0pt,scale=1.5,fill=white,angle'=45]}}, 
+        dashed
+    ]
+    \tikzstyle{tikzuml unidirectional association style}=[
+        color=black, 
+        very thick,
+        -angle 45
+    ]
+    \tikzstyle{tikzuml association style}=[
+        color=black, 
+        very thick,
+    ]
+
+    %% Main Part
+
+    \sf\singlespacing
+    \begin{tikzpicture}[
+        very thick,
+        arrow/.style = {very thick,{Triangle[open]}-}
+    ]
+        \umlsimpleclass[
+            font=\Large,
+            width=6em,
+            draw=emphDraw,
+            fill=commonClass,
+        ]{Видео}
+        \umlsimpleclass[
+            font=\large,
+            draw=emphDraw,
+            fill=emphClass,
+            above=3em of Видео,
+        ]{Визуальное содержимое}
+        \umlaggreg
+            {Видео}
+            {Визуальное содержимое}
+            \umlsimpleclass[
+                font=\normalsize,
+                draw=emphDraw,
+                fill=emphClass,
+                above left=3em of Визуальное содержимое,
+            ]{Фон}
+            \umlaggreg
+                {Визуальное содержимое}
+                {Фон}
+                \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    below left=2em of Фон,
+                ]{Текстуры фона}
+                    \umlaggreg
+                        {Фон}
+                        {Текстуры фона}
+                \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    left=2em of Фон,
+                ]{Цвет фона}
+                    \umlaggreg
+                        {Фон}
+                        {Цвет фона}
+                \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    above left=2em of Фон,
+                ]{Движение фона}
+                    \umlaggreg
+                        {Фон}
+                        {Движение фона}
+            \umlsimpleclass[
+                font=\normalsize,
+                draw=emphDraw,
+                fill=emphClass,
+                above right=3em of Визуальное содержимое,
+            ]{Объекты}
+            \umlaggreg
+                {Визуальное содержимое}
+                {Объекты}
+                \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    above=4em of Объекты,
+                ]{Движение объектов}
+                    \umlaggreg
+                        {Объекты}
+                        {Движение объектов}
+               \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    above left=2em of Объекты,
+                ]{Трансформации объектов}
+                    \umlaggreg
+                        {Объекты}
+                        {Трансформации объектов}
+               \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    above right=2em of Объекты,
+                ]{Цвета объектов}
+                    \umlaggreg
+                        {Объекты}
+                        {Цвета объектов}
+                \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    right=2em of Объекты,
+                ]{Контуры объектов}
+                    \umlaggreg
+                        {Объекты}
+                        {Контуры объектов}
+                \umlsimpleclass[
+                    draw=emphDraw,
+                    fill=emphClass,
+                    below right=2em of Объекты,
+                ]{Текстуры объектов}
+                    \umlaggreg
+                        {Объекты}
+                        {Текстуры объектов}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                above=4em of Фон
+            ]{События}
+                \umlaggreg
+                    {Визуальное содержимое}
+                    {События}
+        \umlsimpleclass[
+            font=\large,
+            draw=emphDraw,
+            fill=emphClass,
+            below left=2em of Видео,
+        ]{Звуковое содержимое}
+        \umlaggreg
+            {Видео}
+            {Звуковое содержимое}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                above left=2em of Звуковое содержимое,
+            ]{Шумы}
+                \umlaggreg
+                    {Звуковое содержимое}
+                    {Шумы}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                left=2em of Звуковое содержимое,
+            ]{Фоновая частота}
+                \umlaggreg
+                    {Звуковое содержимое}
+                    {Фоновая частота}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                below left=2em of Звуковое содержимое,
+            ]{Музыка}
+                \umlaggreg
+                    {Звуковое содержимое}
+                    {Музыка}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                below=2em of Звуковое содержимое,
+            ]{Голос}
+                \umlaggreg
+                    {Звуковое содержимое}
+                    {Голос}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                below right=2em of Звуковое содержимое,
+            ]{Речь}
+                \umlaggreg
+                    {Звуковое содержимое}
+                    {Речь}
+        \umlsimpleclass[
+            font=\large,
+            draw=emphDraw,
+            fill=emphClass,
+            below right=2em of Видео,
+        ]{Текстовое содержимое}
+        \umlaggreg
+            {Видео}
+            {Текстовое содержимое}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                above right=3em of Текстовое содержимое,
+            ]{Надписи в кадрах}
+                \umlaggreg
+                    {Текстовое содержимое}
+                    {Надписи в кадрах}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                right=2em of Текстовое содержимое,
+            ]{Описание}
+                \umlaggreg
+                    {Текстовое содержимое}
+                    {Описание}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                below right=2em of Текстовое содержимое,
+            ]{Субтитры}
+                \umlaggreg
+                    {Текстовое содержимое}
+                    {Субтитры}
+            \umlsimpleclass[
+                draw=emphDraw,
+                fill=emphClass,
+                below=2em of Текстовое содержимое,
+            ]{Распознанная речь}
+                \umlaggreg
+                    {Текстовое содержимое}
+                    {Распознанная речь}
+        \umlassoc
+            {События}
+            {Движение фона}
+        \umlassoc
+            {События}
+            {Трансформации объектов}
+        \umlassoc
+            {События}
+            {Движение объектов}
+        \umlassoc
+            {Текстуры объектов}
+            {Надписи в кадрах}
+        \umlassoc
+            {Текстуры фона}
+            {Шумы}
+        \umlassoc
+            {Речь}
+            {Распознанная речь}
+    \end{tikzpicture}
+\end{document}
+

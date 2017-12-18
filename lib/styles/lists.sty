@@ -1,0 +1,39 @@
+% !TeX encoding = UTF-8
+
+
+% Compressed lists: compactitem etc.
+\usepackage{paralist}
+
+\usepackage{enumitem}
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+
+\newcommand\liststyleWWviiiNumiii{%
+    \renewcommand\labelitemi{[F0B7?]}
+    \renewcommand\labelitemii{o}
+    \renewcommand\labelitemiii{[F0A7?]}
+    \renewcommand\labelitemiv{[F0B7?]}
+}
+
+
+
+
+\newenvironment{foo}{}{}
+\newenvironment{ditemize}
+{
+    \begin{foo}
+        \renewcommand{\labelenumi}{\alph{enumi})}
+        \begin{enumerate}
+}
+{
+        \end{enumerate}
+    \end{foo}
+}
+
+
+\renewcommand{\labelenumi}{\arabic{enumi})}
+
+\renewcommand{\labelenumii}{\alph{enumii})}

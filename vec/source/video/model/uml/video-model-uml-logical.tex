@@ -1,0 +1,659 @@
+
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Логическая модель физического представления видео%
+}
+
+\textwidth=40cm
+
+\begin{document}
+
+    %% My Types
+    \newcommand{\umldtp}[1]{\textsf{#1}}
+    \newcommand{\umlctp}[1]{\textsl{$\star$ #1}}
+    \newcommand{\umlfld}[1]{\textsf{#1}}
+
+
+    %% Tabular Styling
+    \newcolumntype{F}[1]{>{\raggedleft\arraybackslash}m{#1}}
+    \newcolumntype{T}[1]{>{\raggedright\arraybackslash}m{#1}}
+
+    \setlength\dashlinedash{0.2pt}
+    \setlength\dashlinegap{2.5pt}
+    \setlength\arrayrulewidth{0.2pt}
+
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{0.1em}
+
+    %% Tikz Uml Styling
+    \colorlet{commonClass}{yellow!10}
+    \colorlet{commonNote}{green!10}
+    \colorlet{commonDraw}{darkgray}
+
+    \colorlet{emphClass}{yellow!20}
+    \colorlet{emphDraw}{black}
+
+    \tikzumlset{
+        %font=\normalsize,
+        fill class=commonClass,
+        fill note=commonNote,
+        draw=commonDraw,
+    }
+
+    \tikzstyle{tikzuml inherit style}=[
+        color=black,
+        very thick,
+        {-{Stealth[inset=0pt,scale=1.5,fill=white,angle'=45]}}
+    ]
+
+    \tikzstyle{tikzuml aggregation style}=[
+        color=black,
+        very thick,
+        {{Diamond[scale=2,fill=white]}-}
+    ]
+
+    \tikzstyle{tikzuml composition style}=[
+        color=black,
+        very thick,
+        {{Diamond[scale=2,fill=gray!90]}-}
+    ]
+
+    \tikzstyle{tikzuml implements style}=[
+        color=black,
+        very thick,
+        {-{Stealth[inset=0pt,scale=1.5,fill=white,angle'=45]}}, 
+        dashed
+    ]
+
+    %% Main Part
+    \sf\singlespacing
+    \begin{tikzpicture}[
+        very thick,
+        arrow/.style = {very thick,{Triangle[open]}-}
+    ]
+        \umlsimpleinterface{Видео}
+        \umlnote [right=8em of Видео, width=15em] {Видео}{%
+            На верхнем уровне иерархии
+            видео представляет собой контейнер.
+        }
+
+        \umlclass[
+            below=2em of Видео,
+            draw=emphDraw,
+            fill=emphClass,
+        ]{Контейнер}{
+            \begin{tabular}{cF{6em}cT{6em}}
+                $+$ & \umlfld{Путь} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$  & \umlfld{Длительность}
+                     &:& \umldtp{Число секунд};\\
+                \hdashline
+                $+$  & \umlfld{Объём}
+                     &:& \umldtp{Число байт};\\
+                \hdashline
+                $+$  & \umlfld{Битовая частота}
+                     &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Описание} 
+                    &:& \umlctp{Мета};\\
+                \hdashline
+                $+$ & \umlfld{Формат} 
+                    &:& \umlctp{Формат контейнера};\\
+                \hdashline
+                $+$ & \umlfld{Опции} 
+                    &:& \umldtp{Список опций};\\
+                \hdashline
+                $+$ & \umlfld{Потоки} 
+                    &:& \umlctp{Список потоков};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=2em of Контейнер,
+        ]{Мета}{
+            \begin{tabular}{cF{6em}cT{4em}}
+                $+$ & \umlfld{Название} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Описание} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Авторы}   
+                    &:& \umldtp{Список строк};\\
+                \hdashline
+                $+$ & \umlfld{Метки} 
+                    &:& \umlctp{Список строк};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=2em of Мета,
+        ]{Формат контейнера}{
+            \begin{tabular}{cF{6em}cT{4em}}
+                $+$ & \umlfld{Название} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Описание} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Опции} 
+                    &:& \umldtp{Список опций};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=2em of Формат контейнера,
+        ]{Опция контейнера}{
+            \begin{tabular}{cF{6em}cT{4em}}
+                $+$ & \umlfld{Имя} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Значение} 
+                    &:& \umldtp{Строка};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            type=abstract,
+            right=3em of Контейнер,
+            draw=emphDraw,
+            fill=emphClass,
+        ]{Абстрактный поток}{
+            \begin{tabular}{cF{7.5em}cT{8em}}
+                $+$  & \umlfld{Номер}  
+                     &:& \umldtp{Число};\\
+                \hdashline
+                $+$  & \umlfld{Название}
+                     &:& \umldtp{Строка};\\
+                \hdashline
+                $+$  & \umlfld{Описание}
+                     &:& \umldtp{Строка};\\
+                \hdashline
+                $+$  & \umlfld{Язык}
+                     &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Время начала} 
+                    &:& \umlctp{Точка времени};\\
+                \hdashline
+                $+$ & \umlfld{Время конца} 
+                    &:& \umlctp{Точка времени};\\
+                \hdashline
+                $+$  & \umlfld{Битовая частота}
+                     &:& \umldtp{Число};\\
+                \hdashline
+                $\#$ & \umlfld{Пакеты} 
+                     &:& \umlctp{Список пакетов};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below right=2em and 1em of Абстрактный поток.south west,
+        ]{Визуальный поток}{
+            \begin{tabular}{cF{7em}cT{6.5em}}
+                $+$ & \umlfld{Ширина} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Высота} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Кодированная ширина} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Кодированная высота} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Видимое отношение сторон (DAR)} 
+                    &:& \umldtp{(Число, Число)};\\
+                \hdashline
+                $+$ & \umlfld{Хранимое отношение сторон (SAR)} 
+                    &:& \umldtp{(Число, Число)};\\
+                \hdashline
+                $+$ & \umlfld{Частота кадров} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Количество кадров} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+               $+$ & \umlfld{Чересстрочноcть} 
+                    &:& \umldtp{\{Да, Нет\}};\\
+                \hdashline
+                $+$ & \umlfld{Формат} 
+                    &:& \umlctp{Формат пикселей};\\
+                \hdashline
+                $+$ & \umlfld{Есть ссылочные кадры} 
+                    &:& \umldtp{\{Да, Нет\}};\\
+                \hdashline
+                $+$ & \umlfld{Размер группы ссылочных кадров (GOP)} 
+                    &:& \umldtp{Число};\\
+            \end{tabular}
+
+        }
+
+        \umlclass[
+            below right=1em and 0em of Визуальный поток.south west,
+        ]{Звуковой поток}{
+            \begin{tabular}{cF{7em}cT{6.5em}}
+                $+$ & \umlfld{Частота отсчётов}          
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Количество отсчётов}   
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Количество каналов}
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Формат}           
+                    &:& \umlctp{Формат отсчётов};\\
+                \hdashline
+                $+$ & \umlfld{Компоновка}   
+                    &:& \umlctp{Формат каналов};\\
+            \end{tabular}
+
+        }
+
+        \umlclass[
+            left=2em of Звуковой поток,
+        ]{Поток субтитров}{}
+               
+        \umlclass[
+            right=3em of Абстрактный поток,
+            draw=emphDraw,
+            fill=emphClass,
+        ]{Пакет}{
+            \begin{tabular}{cF{6em}cT{8em}}
+                $+$  & \umlfld{Номер}
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Время начала} 
+                    &:& \umlctp{Точка времени};\\
+                \hdashline
+                $+$ & \umlfld{Время конца} 
+                    &:& \umlctp{Точка времени};\\   
+                \hdashline               
+                $\#$ & \umlfld{Кадры} 
+                     &:& \umlctp{Список кадров};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            above=1em of Пакет,
+        ]{Кодек}{
+            \begin{tabular}{cF{4em}cT{8em}}
+                $+$ & \umlfld{Название} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Кодер} 
+                    &:& \umldtp{\{Да, Нет\}};\\
+                \hdashline
+                $+$ & \umlfld{Декодер} 
+                    &:& \umldtp{\{Да, Нет\}};\\
+                \hdashline
+                $+$ & \umlfld{Опции} 
+                    &:& \umldtp{Список опций};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            right=4em of Кодек,
+        ]{Опция кодирования}{
+            \begin{tabular}{cF{6em}cT{4em}}
+                $+$ & \umlfld{Имя} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Значение} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=3em of Пакет,
+        ]{Точка времени}{
+            \begin{tabular}{cF{6em}cT{6.5em}}
+                $+$ & \umlfld{PTS — время отображения} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{DTS — время кодирования} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$  & \umlfld{Масштаб времени}
+                     &:& \umldtp{(Число, Число)};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=2em of Точка времени,
+        ]{Тип кадра}{
+            \begin{tabular}{cF{9em}cT{3em}}
+                $+$ & \umlfld{Название} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Количество ссылок} 
+                    &:& \umldtp{\{0,1,2\}};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=1em of Тип кадра,
+        ]{Формат пикселей}{
+            \begin{tabular}{cF{8em}cT{4em}}
+                $+$ & \umlfld{Название} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Количество цветов} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Битов на пиксель} 
+                    &:& \umldtp{Число};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=2em of Формат пикселей,
+        ]{Формат отсчётов}{
+            \begin{tabular}{cF{7em}cT{4em}}
+                $+$ & \umlfld{Название} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Битов на отсчёт} 
+                    &:& \umldtp{Число};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below=1em of Формат отсчётов,
+        ]{Формат каналов}{
+            \begin{tabular}{cF{7em}cT{4em}}
+                $+$ & \umlfld{Название} 
+                    &:& \umldtp{Строка};\\
+                \hdashline
+                $+$ & \umlfld{Представление} 
+                    &:& \umldtp{Строка};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            type=abstract,
+            right=3em of Пакет,
+            draw=emphDraw,
+            fill=emphClass,
+        ]{Абстрактный кадр}{
+            \begin{tabular}{cF{3em}cT{9em}}
+                $+$ & \umlfld{Номер} 
+                    &:& \umldtp{Число};\\
+                $+$ & \umlfld{Время} 
+                    &:& \umlctp{Точка времени};\\  
+                $\#$& \umlfld{Данные} 
+                    &:& \umldtp{Байтовый массив} ;\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below right=2em and 0em of Абстрактный кадр.south west,
+        ]{Субтитр}{
+            \begin{tabular}{cF{5em}cT{5em}}
+                $+$ & \umlfld{Ширина} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Высота} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Координата по оси X} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Координата по оси Y} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Время начала} 
+                    &:& \umlctp{Точка времени};\\
+                \hdashline
+                $+$ & \umlfld{Время конца} 
+                    &:& \umlctp{Точка времени};\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below right=2em and 0em of Субтитр.south west,
+        ]{Визуальный кадр}{
+            \begin{tabular}{cF{5em}cT{5em}}
+                $+$ & \umlfld{Ширина} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Высота} 
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Тип}    
+                    &:& \umlctp{Тип кадра};\\
+                \hdashline
+                $+$ & \umlfld{Формат} 
+                    &:& \umlctp{Формат пикселей} ;\\
+            \end{tabular}
+        }
+
+        \umlclass[
+            below right=2em and 0em of Визуальный кадр.south west,
+        ]{Звуковой кадр}{
+            \begin{tabular}{cF{5em}cT{5em}}
+                $+$ & \umlfld{Частота отсчётов}          
+                    &:& \umldtp{Число};\\
+                \hdashline
+                $+$ & \umlfld{Количество отсчётов}   
+                    &:& \umldtp{Число};\\
+                \hdashline
+                \hdashline
+                $+$ & \umlfld{Формат}           
+                    &:& \umlctp{Формат отсчётов};\\
+                \hdashline
+                $+$ & \umlfld{Компоновка}   
+                    &:& \umlctp{Формат каналов};\\
+            \end{tabular}
+        }
+
+
+        \umlimpl
+            {Контейнер}
+            {Видео}
+
+        \umlaggreg[
+            mult1=1,
+            mult2=0..1
+        ]
+            {Контейнер}
+            {Мета}
+
+        \umlcompo[
+            mult1=1,
+            mult2=1,
+            geometry=|-,
+            anchors=south west and west
+        ]
+            {Контейнер}
+            {Формат контейнера}
+
+        \umlaggreg[
+            arg1=1,
+            arg2=0..$\ast$,
+            geometry=|-,
+            anchors=south east and east
+        ]
+            {Контейнер}
+            {Опция контейнера}
+
+        \umlaggreg[
+            mult1=1,
+            mult2=0..$\ast$
+        ]
+            {Формат контейнера}
+            {Опция контейнера}
+
+        \umlcompo[
+            mult1=1,
+            mult2=0..$\ast$
+        ]
+            {Контейнер}
+            {Абстрактный поток}
+
+        \umlcompo[
+            mult1=1,
+            mult2=0..$\ast$
+        ]
+            {Абстрактный поток}
+            {Пакет}
+
+        \umlaggreg[
+            mult1=1,
+            mult2=0..$\ast$
+        ]
+            {Пакет}
+            {Абстрактный кадр}
+
+        \umlinherit[
+            geometry=-|,
+            anchors=west and south west
+        ]
+            {Визуальный поток}
+            {Абстрактный поток}
+
+        \umlinherit[
+            geometry=-|,
+            anchors=west and south west
+        ]
+            {Звуковой поток}
+            {Абстрактный поток}
+    
+        \umlinherit[
+            geometry=-|,
+            anchors=west and south west
+        ]
+            {Поток субтитров}
+            {Абстрактный поток}
+        
+        \umlinherit[
+            geometry=-|,
+            anchors=west and south east
+        ]
+            {Визуальный кадр}
+            {Абстрактный кадр}
+
+        \umlinherit[
+            geometry=-|,
+            anchors=west and south east
+        ]
+            {Звуковой кадр}
+            {Абстрактный кадр}
+
+        \umlinherit[
+            geometry=-|,
+            anchors=west and south east
+        ]
+            {Субтитр}
+            {Абстрактный кадр}
+    
+        \umlaggreg[
+            mult1=2,
+            mult2=1
+        ]
+            {Абстрактный поток}
+            {Точка времени}
+
+        \umlaggreg[
+            mult1=2,
+            mult2=1
+        ]
+            {Субтитр}
+            {Точка времени}
+
+        \umlaggreg[
+            mult1=2,
+            mult2=1
+        ]
+            {Пакет}
+            {Точка времени}
+
+        \umlaggreg[
+            mult1=1,
+            mult2=1
+        ]
+            {Абстрактный кадр}
+            {Точка времени}
+
+        \umlaggreg[
+            mult1=1,
+            mult2=1
+        ]
+            {Абстрактный поток}
+            {Кодек}
+
+        \umlcompo[
+            mult1=1,
+            mult2=1
+        ]
+            {Кодек}
+            {Опция кодирования}
+
+        \umlHVHaggreg[
+            mult1=1,
+            mult2=1,
+            arm2=-1em,
+            anchors=-30 and west
+        ]
+            {Визуальный поток}
+            {Формат пикселей}
+
+        \umlHVHaggreg[
+            mult1=1,
+            mult2=1,
+            arm2=1em,
+            anchors=west and east
+        ]
+            {Визуальный кадр}
+            {Формат пикселей}
+
+        \umlHVHaggreg[
+            mult1=1,
+            mult2=1,
+            arm2=1em,
+            anchors=west and east
+        ]
+            {Визуальный кадр}
+            {Тип кадра}
+
+        \umlHVHaggreg[
+            mult1=1,
+            mult2=1,
+            arm2=-1em,
+            anchors=east and west
+        ]
+            {Звуковой поток}
+            {Формат отсчётов}
+
+        \umlHVHaggreg[
+            mult1=1,
+            mult2=1,
+            arm2=-1em,
+            anchors=east and west
+        ]
+            {Звуковой поток}
+            {Формат каналов}
+
+        \umlHVHaggreg[
+            mult1=1,
+            mult2=1,
+            anchors=west and east
+        ]
+            {Звуковой кадр}
+            {Формат отсчётов}
+
+        \umlHVHaggreg[
+            mult1=1,
+            mult2=1,
+            anchors=west and east
+        ]
+            {Звуковой кадр}
+            {Формат каналов}
+
+    \end{tikzpicture}
+\end{document}
+

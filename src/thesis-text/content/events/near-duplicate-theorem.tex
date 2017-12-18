@@ -1,0 +1,75 @@
+%& -shell-escape
+% !TeX root = thesis-abstract.tex
+% !TeX encoding = UTF-8
+% !TeX program = XeLaTeX
+
+\documentclass{.local/lib/classes/ndvr-super-article-standalone}
+
+\begin{document}
+
+    Пусть даны два видео — $V(t)$ и $W(t)$.
+    Считаем, что видео является частным случаем временного ряда.
+    Продолжительность  каждого видео равна $T_{V}$ и $T_{W}$ единиц времени.
+    Единицы измерения времени могут не совпадать.
+    В каждый момент времени каждый ряд обладает набором характеристик,
+    $v_t = V(t_{V})$ и~$w_t = W(t_{W})$  соответственно.
+    Размерности $v_t$ и $w_t$  в общем случае неизвестны.
+    Из точек временного ряда $V(t)$, в которых наблюдались аномалии, 
+    построим временной ряд $(ev_{i})^{k}_{i=1}$.
+    \[
+        \left\lbrace
+            \begin{array}{lcl}
+                (ev_{i})^{k}_{i=1} & = &  ev_1, ev_2, \ldots, ev_k; \\
+                \left\lbrace ev_1, ev_2, \ldots, ev_k  \right\rbrace & \subset & V 
+            \end{array}
+        \right.
+    \]
+    Для $W(t)$ аналогичным образом построим  $(ew_{i})^{n}_{i=1}$.
+    \begin{definition}
+    $V$ и $W$ выражают одинаковую
+    последовательность явлений, если существует $\tser{x}{m}$, 
+    такой что $ \tset{x}{m} \subset \tset{ev}{k} $ 
+    и~$ \tset{x}{m} \subset \tset{ew}{n}$.
+    \[
+        V \esim  W \Longleftrightarrow  
+        \exists \tser{x}{m}; \quad \left\lbrace
+            \begin{array}{lclll}
+                \tset{x}{m} & \subset 
+                    & \tset{ev}{k} 
+                    & \subset & V; \\
+                \tset{x}{m} & \subset 
+                    & \tset{ew}{n} 
+                    & \subset & W 
+            \end{array}
+        \right.
+    \]
+    \end{definition}
+    \begin{definition}
+    $V$ и $W$ являются нечеткими дубликатами друг друга,
+    если существует $\tser{x}{m}$, 
+    такой что $ \tset{x}{m} \subset \tset{v}{k} $ 
+    и~$ \tset{x}{m} \subset \tset{w}{n}$.
+    \[
+        V \ndsim  W \Longleftrightarrow 
+        \exists \tser{x}{m}; \quad \left\lbrace
+            \begin{array}{lclll}
+                \tset{x}{m} & \subset 
+                    & \tset{v}{k} 
+                    & \subset & V; \\
+                \tset{x}{m} & \subset 
+                    & \tset{w}{n} 
+                    & \subset & W 
+            \end{array}
+        \right.
+    \]
+    \end{definition}
+    \begin{statement}[О дубликатах]
+        Нечеткие дубликаты видео выражают 
+        одинаковую последовательность явлений.
+        \[
+             V \esim  W \Longrightarrow  V \ndsim  W
+        \]
+    \end{statement}
+
+\end{document}
+ 

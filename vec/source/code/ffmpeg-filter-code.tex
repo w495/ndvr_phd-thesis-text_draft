@@ -1,0 +1,37 @@
+
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Темпоральная модель визуального потока видео%
+}
+
+\textwidth=40em
+
+\begin{document}
+    \begin{minted}{python}
+        # Фильтр линейной задержки.
+        delay = DelayFilter() 
+
+        # Входящий сигнал без изменения.
+        orig = delay(0)
+
+        # Сдвиг сигнала на один кадр.
+        shift = ShiftSWFilter() 
+        
+        # Норма сигнала.
+        norm = NormFilter()
+
+        # Разница соседних кадров.
+        diff = orig - shift
+
+        # Фильтр нормированной попиксельной абсолютной разницы.
+        d_filter = diff | abs | norm(l=1)
+
+        # Абсолютная разница двух последовательных разниц.
+        d_diff_filter = d_filter | diff | abs
+
+        # Минимум между разницей и разницей разниц.
+        ffmpeg_like = Filter.union(d_filter, d_diff_filter) | min
+    \end{minted}
+\end{document}
+

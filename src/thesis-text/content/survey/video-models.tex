@@ -1,0 +1,58 @@
+%& -shell-escape
+% !TeX root = thesis-abstract.tex
+% !TeX encoding = UTF-8
+% !TeX program = XeLaTeX
+
+\documentclass{.local/lib/classes/ndvr-super-article-standalone}
+
+\begin{document}
+
+    Видео содержит в себе несколько видов данных. 
+    Выделяют четыре вида:\footnote{
+        Работа Смитона Techniques used and open challenges 
+        to the analysis, indexing and retrieval of digital video. 
+            Information Systems, 32(4):545–559, 2006.
+    }
+    \begin{itemize}
+        \item метаданные — заголовок, автор и описание;
+        \item звуковая дорожка;
+        \item тексты, полученные при помощи технологии 
+            оптического распознавания символов (OCR) 
+            или при помощи технологий распознавания речи;
+        \item визуальная информация кадров видео. 
+    \end{itemize}
+
+    Источники данных разной природы 
+    не являются независимыми. Они тесно связаны и дополняют 
+    друг друга, позволяя воссоздать полную 
+    картину происходящего.
+    Связь различных видов данных представлена
+    на рисунке \ref{fig:semantic-uml}.
+
+    \begin{figure}[H]
+        \includegraphics[width=\textwidth]
+            {.local/vec/out/pdf/video-model-uml-semantic.pdf}
+        \caption{%
+            Логическая модель видео,\\
+            выраженная диаграммой классов UML 2.0%
+        }
+        \label{fig:semantic-uml}
+    \end{figure}
+
+    Часто видео рассматривается 
+    как~последовательность кадров.
+    Это связано с особенностями физического представления видео.
+    Модель физического представления видео показана  
+    на рисунке \ref{fig:phisical-uml}.
+
+    \begin{figure}[p]
+        \includegraphics[width=\textwidth]
+            {.local/vec/out/pdf/video-model-uml-logical.pdf}
+        \caption{%
+            Логическая модель физического представления видео,\\
+            выраженная диаграммой классов UML 2.0%
+        }
+        \label{fig:phisical-uml}
+    \end{figure}
+    
+\end{document}

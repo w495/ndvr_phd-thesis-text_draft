@@ -1,0 +1,25 @@
+% !TeX encoding = UTF-8
+
+\usepackage{.local/lib/styles/bashline}
+
+\usepackage{trimspaces}
+
+\makeatletter
+
+    \newcommand{\commit}{%
+        \bashline{git describe --dirty --always | head -1}%
+    }
+
+    \newcommand{\commitlog}{%
+        \bashline{git log -1 --oneline}%
+    }
+
+    \newcommand{\branch}{%
+        \bashline{git describe --all}%
+    }
+
+    \newcommand{\bashls}[1]{%
+        \bashline{ls #1 | tr ' ' '\quad'}%
+    }
+
+\endinput

@@ -1,0 +1,573 @@
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    DFD-схема поиска по видео в нотации Йордона — Де Марко.%
+}
+
+\textwidth=50cm
+
+\begin{document}
+
+    \newcounter{DFDFunction}
+    \newcommand{\DFDFunction}{%
+        \stepcounter{DFDFunction}%
+        {\small\textsf{(Функция~\arabic{DFDFunction})}}%
+    }
+
+    \newcounter{DFDStorage}
+    \newcommand{\DFDStorage}{%
+        \stepcounter{DFDStorage}%
+        {\small\textsf{(Хранилище~\arabic{DFDStorage})}}%
+    }
+
+    \newcounter{DFDBlock}
+    \newcommand{\DFDBlock}{%
+        \stepcounter{DFDBlock}%
+        {\textsf{\arabic{DFDBlock}}}%
+    }
+
+    \makeatletter
+        \pgfdeclareshape{storage}{
+            \inheritsavedanchors[from=rectangle]
+            \inheritanchorborder[from=rectangle]
+            \inheritanchor[from=rectangle]{center}
+            \inheritanchor[from=rectangle]{base}
+            \inheritanchor[from=rectangle]{north}
+            \inheritanchor[from=rectangle]{north east}
+            \inheritanchor[from=rectangle]{east}
+            \inheritanchor[from=rectangle]{south east}
+            \inheritanchor[from=rectangle]{south}
+            \inheritanchor[from=rectangle]{south west}
+            \inheritanchor[from=rectangle]{west}
+            \inheritanchor[from=rectangle]{north west}
+            \backgroundpath{
+                %  store lower right in xa/ya and upper right in xb/yb
+                \southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+                \northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+                \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+                \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+                \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+                \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+            }
+        }
+    \makeatother
+
+    \tikzstyle{dfd-block} = [
+        rectangle,dashed,
+        rounded corners,
+        thick,
+        fill=yellow!10,
+        minimum width =1em,
+        minimum height = 1em,
+        inner sep=16pt,
+        draw=gray,
+    ]
+
+    \tikzstyle{dfd-block-caption} = [
+        color=darkgray,
+    ]
+
+    \tikzstyle{dfd-union} = [
+        draw,dashed,
+        inner xsep=6pt,
+        inner ysep=8pt,
+        rectangle,
+        rounded corners,
+        very thick,
+        fill=yellow!5,
+        draw=black,
+    ]
+
+    \tikzstyle{dbf} = [
+        cylinder,
+        shape border rotate=90,
+        aspect=0.25,
+        dotted,
+        minimum size=5em,
+        draw=black!85,
+        top color=yellow!5,
+        bottom color=yellow!5
+    ]
+
+
+    \newcommand{\tb}[2][6em]{{\parbox[c]{#1}{#2}}}
+
+    \sf\singlespacing
+    \begin{tikzpicture}[
+        font=\sffamily,
+        very thick,
+        node distance=10em,
+        source/.style={draw,thick,rounded corners,fill=yellow!20,inner sep=.3cm},
+        comment/.style={draw,thick,rounded corners,font=\color{teal!80!black!100},fill=none,inner sep=.3cm},
+        process/.style={draw,very thick,circle,fill=teal!5},
+        process-me/.style={draw,ultra thick,circle,fill=teal!10},
+        sink/.style={source,fill=green!20},
+        storage/.style={draw,very thick,shape=storage,inner sep=.3cm},
+        storage-me/.style={draw,ultra thick,shape=storage,inner sep=.3cm},
+        dots/.style={gray,scale=2},
+        to/.style={
+            -{Stealth[scale=1.5,fill=gray,angle'=45]},
+            shorten >=1pt,
+            very thick,
+            rounded corners,
+            font=\sffamily\small
+        },
+        every node/.style={align=center}
+    ]
+
+        \node[
+            source,
+            minimum width=5em, 
+            minimum height=5em,
+        ]   (source)    {
+            Исходные\\видео
+        }; 
+
+        \begin{scope}
+            \node[
+                process-me,
+                right of=source
+            ]   (demux)     {
+                Разделить\\потоки~$*$\\\DFDFunction
+            };
+            \draw[to] (source) -- (demux);
+            \node[
+                storage-me,
+                right of=demux
+            ]   (streams)     {
+                Потоки~$*$\\\DFDStorage
+            };
+            \draw[to] (demux) -- (streams);
+            \node[
+                process-me,
+                right of=streams
+            ]  (decode)    {
+                Декодировать~$*$\\\DFDFunction
+            };
+            \draw[to] (streams) -- (decode);
+            \node[
+                storage-me,
+                right of=decode
+            ]  (frames)    {
+                Kадры~$*$\\\DFDStorage
+            };
+            \draw[to] (decode) -- (frames);
+            \node[
+                process-me,
+                right of=frames
+            ]  (simple-feature-extraction)    {
+                Извлечь\\свойства~$*$\\\DFDFunction
+            };
+            \draw[to] (frames)--(simple-feature-extraction);
+            \node[
+                storage-me,
+                right of=simple-feature-extraction
+            ]  (simple-frame-features)    {
+                Свойства\\кадров~$*$\\\DFDStorage
+            };
+            \draw[to]   (simple-feature-extraction) 
+                        -- (simple-frame-features);
+
+            \begin{scope}[on background layer]
+                \node[
+                    dfd-block, 
+                    inner xsep=18pt,
+                    inner ysep=24pt,
+                    fit=(streams) (demux)%
+                        (decode) (frames)%
+                        (simple-feature-extraction)
+                        (simple-frame-features)%
+                ] (unpack-block) {};
+                \node[
+                    dfd-block-caption,
+                    below right=0.3em of unpack-block.north west
+                ] {\small Блок~\DFDBlock\ —~распаковка 
+                    свойств кадров};
+            \end{scope}
+        \end{scope};
+
+        \begin{scope}
+            \node[
+                process-me,
+                below=3 of simple-frame-features
+            ]  (shot-detection)   {
+                Выделить\\сегменты~$*$\\\DFDFunction
+            };  
+            % \draw[to] (frames) to[out=0,in=0]  (shot-detection);
+            \draw[to] (simple-frame-features) -- (shot-detection);
+            \node[
+                storage-me,
+                below of=shot-detection
+            ]  (shots)     {
+                Съёмки~$*$\\\DFDStorage
+            };    
+            \draw[to] (shot-detection) -- (shots);
+            \node[
+                process,
+                left of=shot-detection
+            ]  (choose)    {
+                Выбрать\\ключевые\\кадры\\\DFDFunction
+            };
+            \draw[to] (shots) to[out=120,in=0]  (choose);
+            \node[
+                storage,
+                left of=choose
+            ]  (key-frames)     {
+                Ключевые\\кадры\\\DFDStorage
+            };    
+            \draw[to] (choose) -- (key-frames);
+            \node[
+                process,
+                below  of=key-frames
+            ]  (join-scenes)   {
+                Объединить\\съёмки\\\DFDFunction
+            };
+            \draw[to] (shots) to[out=140,in=40]  (join-scenes);
+            \draw[to] (key-frames) -- (join-scenes);
+            \node[
+                storage,
+                right of=join-scenes
+            ]  (scenes)   {
+                Сцены\\\DFDStorage
+            };
+
+            \draw[to] (join-scenes) -- (scenes);
+            \begin{scope}[on background layer]
+                \node[
+                    dfd-block, 
+                    inner xsep=14pt,
+                    inner ysep=18pt,
+                    below left=0em and 0em of unpack-block,
+                    fit=(shot-detection) (shots) (choose)%
+                        (key-frames) (join-scenes) (scenes)
+                ] (segm-block) {};
+                \node[
+                    dfd-block-caption,
+                    below right=0.3em of segm-block.north west
+                ] {\small Блок~\DFDBlock\ — сегментация};
+                \node[
+                    dfd-union,
+                    below left=0em and 0em of unpack-block,
+                    fit=(shots) (scenes)
+                ] (segments) {};
+            \end{scope}
+        \end{scope}
+
+        \begin{scope}
+            \node[
+                process, 
+                left=54pt of key-frames
+            ]  (feature-extraction)     {
+                Извлечь\\{\small характеристики}\\\DFDFunction
+            };
+
+            \draw[to]   (key-frames) -- (feature-extraction);
+            \draw[to]   (simple-frame-features) 
+                        to[out=-120,in=60] 
+                        (feature-extraction);
+            \node[
+                storage,
+                left of=feature-extraction
+            ]  (edges)         { 
+                Края\\\DFDStorage
+            };
+            \draw[to] (feature-extraction) -- (edges);
+            \node[
+                process,            
+                left of=edges
+            ]  (contouring)     {
+                Найти\\контуры\\\DFDFunction
+            };
+            \draw[to] (edges) -- (contouring);
+            \node[
+                storage,
+                below of=contouring
+            ]  (contours)         { 
+                Контуры\\\DFDStorage
+            };
+                \draw[to]   (contouring) 
+                            -- 
+                            (contours);
+            \node[
+                storage,
+                below of=edges
+            ]  (colors)         { 
+                Цвета\\\DFDStorage
+            };
+                \draw[to]   (feature-extraction) 
+                            to[out=-135,in=90] 
+                            (colors);
+            \node[
+                storage,
+                below of=feature-extraction
+            ]  (textures)         { 
+                Текстуры\\\DFDStorage
+            };
+            \draw[to] (feature-extraction) -- (textures);
+
+            \begin{scope}[on background layer]
+                \node[
+                    dfd-block,
+                    inner xsep=18pt,
+                    inner ysep=16pt,
+                    below left=0em and 0em of unpack-block,
+                    fit=(feature-extraction) (contouring)%
+                        (edges) (contours) (textures) (colors)
+                ] (feature-block) {};
+                \node[
+                    dfd-block-caption,
+                    below right=0.3em of feature-block.north west
+                ] {\small Блок~\DFDBlock\
+                    —~извлечение характеристик};
+                \node[
+                    dfd-union,
+                    below left=0em and 0em of unpack-block,
+                    fit=(contours) (textures) (colors)
+                ] (features) {};
+            \end{scope}
+        \end{scope};
+
+        \begin{scope}
+            \node[
+                process,
+                below=3 of contours
+            ]  (object-detection)         { 
+                Выделить\\объекты\\\DFDFunction
+            };
+            \draw[to]   (features) 
+                        to[out=-150,in=90] 
+                        (object-detection);
+            \node[
+                storage,
+                right of=object-detection
+            ]  (objects)         { 
+                Объекты\\\DFDStorage
+            };
+            \draw[to] (object-detection) -- (objects);
+            \node[
+                process,
+                right  of=objects
+            ]  (moving-detection)         { 
+                Выделить\\движение\\\DFDFunction
+            };
+            \draw[to]   (objects) -- (moving-detection);
+            \draw[to] (features) to[out=-30,in=90] (moving-detection);
+            \node[
+                storage,
+                right of=moving-detection
+            ]  (movings)         { 
+                Движение\\\DFDStorage
+            };
+            \draw[to] (moving-detection) -- (movings);
+            \node[
+                process-me,
+                right  of=movings
+            ]  (event-detection)         { 
+                Выделить\\события~$*$\\\DFDFunction
+            };
+            \draw[to] (movings) -- (event-detection);
+            \draw[to] (scenes) to[out=-90,in=100] (event-detection);
+            \draw[to] (shots) to[out=-90,in=80] (event-detection);
+            \node[
+                storage-me,
+                right of=event-detection
+            ]  (events)         { 
+                События~$*$\\\DFDStorage
+            };
+            \draw[to] (event-detection) -- (events);
+            \begin{scope}[on background layer]
+                \node[
+                    dfd-block, 
+                    inner xsep=16pt,
+                    inner ysep=16pt,
+                    below left=0em and 0em of unpack-block,
+                    fit=(events) (movings) (objects)%
+                        (event-detection)%
+                        (moving-detection)%
+                        (object-detection)
+                ] (info-block) {};
+                \node[
+                    dfd-block-caption,
+                    below right=0.3em of info-block.north west
+                ] {\small Блок~\DFDBlock};
+                \node[
+                    dfd-union,
+                    fit=(events) (movings) (objects)
+                ] (info) {};
+            \end{scope}
+        \end{scope};
+        \begin{scope}
+
+
+            \node[
+                process,
+                below=3 of objects
+            ]  (sum-up-objects)         { 
+                Аннотировать\\объекты\\\DFDFunction
+            };
+            \draw[to] (objects) -- (sum-up-objects);
+
+            \node[
+                storage,
+                left of=sum-up-objects
+            ]  (objects-summary)         { 
+                Описания\\объектов\\\DFDStorage
+            };
+            \draw[to] (sum-up-objects) -- (objects-summary);
+
+
+            \node[
+                process,
+                below=3 of movings
+            ]  (sum-up-movings)         { 
+                Аннотировать\\движение\\\DFDFunction
+            };
+            \draw[to] (movings) -- (sum-up-movings);
+
+            \node[
+                storage,
+                left of=sum-up-movings
+            ]  (movings-summary)         { 
+                Описания\\движений\\\DFDStorage
+            };
+            \draw[to] (sum-up-movings) -- (movings-summary);
+
+            \node[
+                process-me,
+                below=3 of events
+            ]  (sum-up-event)         { 
+                Аннотировать\\события~$*$\\\DFDFunction
+            };
+
+            \draw[to] (events) -- (sum-up-event);
+
+            \node[
+                storage-me,
+                left of=sum-up-event
+            ]  (events-summary)         { 
+                Описания\\событий~$*$\\\DFDStorage
+            };
+            \draw[to] (sum-up-event) -- (events-summary);
+            \begin{scope}[on background layer]
+                \node[
+                    dfd-block, 
+                    inner xsep=16pt,
+                    inner ysep=16pt,
+                    fit=(sum-up-event) (sum-up-movings) (sum-up-objects)%
+                        (events-summary) (movings-summary) (objects-summary)%
+                ] (summary-block) {};
+                \node[
+                    dfd-block-caption,
+                    below right=0.3em of summary-block.north west
+                ] {\small Блок~\DFDBlock\ —  аннотирование};
+            \end{scope}
+        \end{scope};
+        \begin{scope}[node distance=12em]
+            \node[
+                process-me,
+                below=2 of summary-block
+            ]  (sum-up-video)         { 
+                Построить\\описания видео\\целиком~$*$\\\DFDFunction
+            };
+
+            \draw[to] (events-summary)  to[out=-120,in=80]  (sum-up-video);
+            \draw[to] (movings-summary)  to[out=-90,in=100]  (sum-up-video);
+            \draw[to] (objects-summary)  to[out=-90,in=120]  (sum-up-video);
+            \draw[to] (features.west)  to[out=180,in=90]  ++(-2,-2) -- ++(0,-10) to[out=-90,in=140]  (sum-up-video);
+            \draw[to] (info.east)  to[out=0,in=90]  ++(1,-1) -- ++(0,-6) to[out=-90,in=60]  (sum-up-video);
+            \draw[to] (segments.east)  to[out=0,in=90]  ++(2,-2) -- ++(0,-10) to[out=-90,in=40]  (sum-up-video);
+            
+
+            \node[
+                storage-me,
+                below left of=sum-up-video
+            ]  (video-summary)         { 
+                Описания\\видео\\целиком~$*$\\\DFDStorage
+            };
+
+            \draw[to] (sum-up-video)  -- (video-summary);
+
+            \node[
+                process-me,
+                below right of=sum-up-video
+            ]  (build-signature)         { 
+                Построить\\сигнатуры~$*$\\\DFDFunction
+            };
+
+
+            \draw[to] (video-summary) -- (build-signature);
+
+
+            \node[
+                storage-me,
+                below left of=build-signature
+            ]  (video-signature)         { 
+                \Large Сигнатуры~$*$\\\DFDStorage
+            };
+
+            \draw[to] (build-signature) -- (video-signature);
+
+            \begin{scope}[on background layer]
+                \node[
+                    dfd-block, 
+                    inner xsep=42pt,
+                    inner ysep=16pt,
+                    fit=(sum-up-video) (video-summary) 
+                        (build-signature) (video-signature)%
+                ] (signature-block) {};
+                \node[
+                    dfd-block-caption,
+                    below right=0.3em of signature-block.north west
+                ] {\parbox{4em}{
+                    \small 
+                    Блок~\DFDBlock\ — \\
+                    построение\\
+                    сигнатуры
+                }};
+            \end{scope}
+        \end{scope};
+        \begin{scope}
+            \node[
+                storage-me,
+                below=3 of video-signature
+            ]  (video-index)         { 
+                \huge Индекс~$*$\\\DFDStorage
+            };
+            \node[
+                process-me,
+                left of=video-index
+            ]  (build-index)         { 
+                \large Построить\\индекс~$*$\\\DFDFunction
+            };
+            \node[
+                process-me,
+                right of=video-index
+            ]  (find-in-index)         { 
+                \large Искать\\по индексу~$*$\\\DFDFunction
+            };
+            \draw[to]  (build-index) -- (video-index);
+            \draw[to]  (video-signature) -- (build-index);
+            \draw[to]  (video-signature) -- (find-in-index);
+            \draw[to]  (video-index) -- (find-in-index);
+            \begin{scope}[on background layer]
+                \node[
+                    dfd-block, 
+                    inner xsep=52pt,
+                    inner ysep=24pt,
+                    fit=(build-index) (video-index) (find-in-index)%
+                ] (signature-block) {};
+                \node[
+                    dfd-block-caption,
+                    below right=0.3em of signature-block.north west
+                ] {\small Блок~\DFDBlock\ —~индексация};
+
+                \node[
+                    dbf, 
+                    fit=(video-index)%
+                ] (signature-block) {};
+
+            \end{scope}
+        \end{scope};
+    \end{tikzpicture}
+\end{document}
+

@@ -1,0 +1,41 @@
+
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Темпоральная модель визуального потока видео%
+}
+
+\textwidth=40em
+
+\begin{document}
+    \begin{minted}{python}
+        # Размеры скользящих окон.
+        A = 100
+        B = 200
+
+        # Фильтр линейной задержки.
+        delay = DelayFilter()
+
+        # Входящий сигнал без изменения.
+        orig = delay(0)   
+
+        # Сдвиг сигнала на один кадр.
+        shift = ShiftSWFilter()
+
+        # Фильтр смены знака.
+        sign_change = SignChangeFilter()
+
+        # Скользящее окно для каждого кадра.
+        sw = BaseSWFilter(min_size=2)
+
+        # Скользящее среднее. 
+        sw_mean = sw | numeric.mean
+
+        # Разница скользящих средних.
+        sw_mean_diff = sw_mean(s=A) - sw_mean(s=B)
+
+        # Результирующий фильтр: точки разладок.
+        result_filter = norm(l=1) | sw_mean_diff | sign_change | abs
+    \end{minted}
+\end{document}
+

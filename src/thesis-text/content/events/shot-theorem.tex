@@ -1,0 +1,62 @@
+%& -shell-escape
+% !TeX root = thesis-abstract.tex
+% !TeX encoding = UTF-8
+% !TeX program = XeLaTeX
+
+\documentclass{.local/lib/classes/ndvr-super-article-standalone}
+
+\begin{document}
+
+    В кинематографе существует три различных понятия. 
+    Кадр или фотографический кадр — статическое изображение. 
+    В мультипликации для его обозначения используют термин «кадрик». 
+    Сцена — множество кадров, связанных единством места и времени. 
+    Съёмка или монтажный план — множество кадров, 
+    связанных единством процесса съёмки. 
+    Сцена может включать несколько съёмок\footnote{
+        Fabro М.D., Böszörmenyi L. State-of-the-art 
+        and future challenges in video scene detection: a survey
+        In Multimedia Systems, Vol. 19, № 5; (2013), 
+        pp. 427-454, doi:10.1007/s00530-013-0306-4 
+        by Manfred Del Fabro, Laszlo Böszörmenyi, 
+        Multimedia Systems Volume 19, Issue 5 , pp 427-454 
+    }.
+
+    \begin{definition}
+    Съёмка или кинематографический кадр~---~совокупность 
+    множества фотографических кадров $\videoframe$
+    внутри временной области $\videoline$, 
+    кадры которой $\videoframe_{ \videoshot, i}$
+    значительно отличаются от кадров соседних областей.
+    \[
+        \left\lbrace
+            \begin{array}{rll}
+                \videoshot & = &  \{
+                        \videoframe_{ \videoshot, i}
+                            ; \videoframediff(\videoframe_{ \videoshot, i},
+                                \videoframe_{\videoshot, j})
+                                    < { \varepsilon},
+                                \videoframe_{\videoshot, i},
+                                \videoframe_{\videoshot, j}
+                                \in \videoline
+                    \}\\
+                \videoframediff & = &  \text{функция разности кадров}.
+
+            \end{array}
+        \right.
+    \]
+    \end{definition}
+    \begin{definition}
+        Аномалия — скачкообразное изменение свойств 
+        наблюдаемого ряда в заранее неизвестный момент времени.
+        Иногда аномалию называют <<разладкой>>.
+    \end{definition}
+    \noindent Будем называть моментами событий~---~моменты времени,
+    в~которых наблюдались аномалии. 
+
+    \begin{statement}[О событиях]
+        Моменты событий совпадают с моментами смены съёмок. 
+    \end{statement}
+
+\end{document}
+ 

@@ -1,0 +1,97 @@
+% !TeX encoding = UTF-8
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{.local/lib/styles/files}[2017/17/04 Files]
+
+\usepackage{currfile}
+
+\usepackage{currfile-abspath}
+
+
+\usepackage{import}
+
+\usepackage{standalone}
+
+\newcommand{\standalonetoc}{
+        \ifstandalone%
+            \tableofcontents\pagebreak%
+        \fi%
+}
+
+\newcommand{\standaloneindex}{
+        \ifstandalone%
+            \printindex
+        \fi%
+}
+
+\newcommand{\standalonebiblio}[2]{
+        \ifstandalone%
+            \biblio{#1}{#2}
+        \fi%
+}
+
+
+
+\newcommand{\module}[1]{
+    #1/\currfilebase/
+}
+
+
+
+\newcommand{\relimport}[1]{%
+
+    \message{@relimport file= <#1>}
+    \message{@relimport currfiledir  <./\currfiledir> }
+    \message{@relimport currfilebase <\currfilebase> } 
+    \message{@relimport currfileext  <\currfileext> }
+    \message{@relimport currfilename <\currfilename> }
+    \message{@relimport currfilepath <\currfilepath> }
+    
+    \message{@relimport currfileabsdir  <./\currfileabsdir> }
+    \message{@relimport currfileabspath <\currfileabspath> }
+
+    \message{@relimport thepwd <\thepwd> }
+    
+    \message{@relimport themainfile <\themainfile> }
+
+    
+    %\import{\currfilebase/}{#1/__init__}
+
+
+    \IfFileExists{\currfiledir#1}{
+        \message{relimport 1: \currfiledir#1 exists}
+        \import{\currfiledir}{#1}
+    }{
+        \message{relimport: \currfiledir#1 does not exist}
+        \IfFileExists{\currfiledir#1/__init__}{
+            \message{relimport 2: \currfiledir#1/__init__ exists}
+            \import{\currfiledir}{#1/__init__}
+        }{
+            \message{relimport: \currfiledir#1/__init__ does not exist}
+            \IfFileExists{\currfiledir\currfilebase/#1}{
+                \message{relimport 3: \currfiledir\currfilebase/#1 exists}
+                \subimport{\currfiledir\currfilebase}{/#1}
+            }{
+                \message{relimport: \currfiledir\currfilebase/#1 does not exist}
+                \IfFileExists{\currfiledir\currfilebase/#1/__init__}{
+                    \message{relimport 4: \currfiledir\currfilebase/#1/__init__ exists}
+                    \subimport{\currfiledir\currfilebase/}{#1/__init__}
+                }{
+                    \message{relimport: \currfiledir\currfilebase/#1/__init__ does not exist}
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+\usepackage{.local/lib/styles/bashline}
+
+%# \currfilesum#
+\newcommand{\currfilesum}{%
+    \bashline{md5sum \currfilepath | cut -f1 -d' '}%
+}
+
+\endinput

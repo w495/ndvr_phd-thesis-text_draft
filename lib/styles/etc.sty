@@ -1,0 +1,57 @@
+% !TeX encoding = UTF-8
+
+
+\newenvironment{annotation-item}[2]{
+    \subsection*{#1}
+    \begin{center}
+        \textit{#2}
+    \end{center}
+}{
+    
+}
+
+
+\newenvironment{description-item}[1]{
+    %\subsection{#1}
+    \addcontentsline{toc}{subsection}{#1} %
+    \textbf{#1.}
+}{
+    
+}
+
+
+
+\newenvironment{content-item}[1]{
+    %\subsection{#1}
+    \addcontentsline{toc}{subsection}{#1} %
+}{
+    
+}
+
+
+
+\newcommand{\esim}{\stackrel{e}{\sim}}
+\newcommand{\ndsim}{\stackrel{nd}{\approx}}
+\newcommand{\tser}[2]{ (#1_{i})^{#2}_{i=1} }
+\newcommand{\tset}[2]{ \left\lbrace \tser{#1}{#2} \right\rbrace }
+
+
+
+\newcommand{\videoframe}{{\varphi}}
+
+
+\newcommand{\videoshot}{{\sigma}}
+
+
+\newcommand{\videoscene}{{\mathfrak{s}}}
+
+\newcommand{\videosound}{{\zeta}}
+
+\newcommand{\videoline}{{\tau}}
+
+\newcommand{\videoframediff}{{\mathrm{diff}}}
+
+
+\newcommand{\SAX}{{\mathrm{SAX}}}
+
+\newcommand{\iSAX}[1][]{{i\mathrm{SAX}#1}}

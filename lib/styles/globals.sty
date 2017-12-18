@@ -1,0 +1,102 @@
+% !TeX encoding = UTF-8
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{.local/lib/styles/globals}[2017/17/04 Globals]
+
+\RequirePackage{ifthen}
+\RequirePackage{ifpdf}
+\RequirePackage{ifxetex}
+
+
+\makeatletter
+    %# \title[%<short%>]{%<full%>}#
+    \renewcommand*{\title}[2][]{%
+        \gdef\@title@alt{#1}%
+        \gdef\@title{#2}%
+    }
+    \renewcommand*{\@title}{%
+        Title
+    }
+    \newcommand*{\@title@alt}{%
+        \@title
+    }
+    
+    %# \project[%<short%>]{%<full%>}#
+    \newcommand*{\project}[2][]{%
+        \gdef\@project@alt{\trim@spaces{#1}}%
+        \gdef\@project{\trim@spaces{#2}}%
+    }
+    \newcommand*{\@project}{%
+        Project Name
+    }
+    \newcommand*{\@project@alt}{%
+        \@project
+    }
+    
+    %# \subject[%<short%>]{%<full%>}#
+    \newcommand*{\subject}[2][]{%
+        \gdef\@subject@alt{\trim@spaces{#1}}%
+        \gdef\@subject{\trim@spaces{#2}}%
+    }
+    \newcommand*{\@subject}{%
+        Subject Name
+    }
+    \newcommand*{\@subject@alt}{%
+        \@subject
+    }
+    
+    %# \author[%<short%>]{%<full%>}#
+    \renewcommand*{\author}[2][]{%
+        \gdef\@author@alt{\trim@spaces{#1}}%
+        \gdef\@author{\trim@spaces{#2}}%
+    }
+    \renewcommand*{\@author}{%
+        Author
+    }
+    \newcommand*{\@author@alt}{%
+        \@author
+    }
+    
+    %# \keywords[%<short%>]{%<full%>}#
+    \newcommand*{\keywords}[2][]{%
+        \gdef\@keywords@alt{#1}%
+        \gdef\@keywords{#2}%
+    }
+    \newcommand*{\@keywords}{%
+        Keywords
+    }
+    \newcommand*{\@keywords@alt}{%
+        \@keywords
+    }
+    
+    %# \place[%<short%>]{%<full%>}#
+    \newcommand*{\place}[2][]{%
+        \gdef\@place@alt{#1}%
+        \gdef\@place{#2}%
+       
+    }
+    \newcommand*{\@place}{%
+        Moscow, Russia
+    }
+    \newcommand*{\@place@alt}{%
+        \@place
+    }
+    
+    %# \email{%<email%>}#
+    \newcommand*{\email}[1]{%
+        \gdef\@email{#1}%
+    }
+    \newcommand*{\@email}{%
+        some@mail.com
+    }
+    
+    %# \email{%<phone%>}#
+    \newcommand*{\phone}[1]{%
+        \gdef\@phone{#1}%
+    }
+    \newcommand*{\@phone}{%
+        +7\,000\,000\,00\,00
+    }
+    \makeatother
+
+\endinput
+

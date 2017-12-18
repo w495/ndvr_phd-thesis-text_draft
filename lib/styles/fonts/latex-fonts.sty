@@ -1,0 +1,43 @@
+% !TeX encoding = UTF-8
+
+\ifpdf
+    \usepackage{cmap}
+\fi
+
+%\usepackage[T1]{fontenc}
+\usepackage[T2A]{fontenc}
+%\usepackage[T2B]{fontenc}
+%\usepackage[T2C]{fontenc}
+\usepackage{lmodern}
+\usepackage{charter}
+\usepackage{times}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\selectlanguage{russian}
+
+\DeclareUnicodeCharacter{0301}{\!\!\!\!\textasciiacute}
+\DeclareUnicodeCharacter{03B1}{$\alpha$}
+\DeclareUnicodeCharacter{FE6A}{\%}
+
+
+%\newcommand{\mechanica}{{\sf}}
+%\newcommand{\typewriter}{{\tt}}
+%\newcommand{\byhand}[1]{\underline{\it #1}}
+
+\usepackage{etex}
+\frenchspacing
+%\input{glyphtounicode}
+
+\pdfgentounicode=1
+\pdfcompresslevel=0
+
+
+\newcommand*{\cp}[1]{%
+    \BeginAccSupp{%
+	ActualText=\detokenize{#1},%
+	method=escape,
+    }%
+	#1%
+    \EndAccSupp{}%
+}

@@ -1,0 +1,64 @@
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    DFD-схема поиска по видео в нотации Йордона — Де Марко.%
+}
+
+\textwidth=28cm
+
+\begin{document}
+    \sf
+    \tikzstyle{framef} = [
+        rectangle, rounded corners,
+        very thick,
+        minimum size=2em,
+        fill=white,
+        draw=black!85,
+    ]
+    \tikzstyle{arrowf} = [
+        -latex,ultra thick,black!85,
+    ]
+    \begin{tikzpicture}[very thick,node distance=4em]
+
+        \node[framef, fill=red!20]                    (tf1) {$1$};
+        \node[framef, fill=orange!20,   right of=tf1] (tf2) {$2$};
+        \node[framef, fill=yellow!20,   right of=tf2] (tf3) {$3$};
+        \node[framef, fill=green!20,    right of=tf3] (tf4) {$4$};
+        \node[framef, fill=cyan!20,     right of=tf4] (tf5) {$5$};
+        \node[framef, fill=cyan!50,     right of=tf5] (tf6) {$6$};
+        \node[framef, fill=blue!20,     right of=tf6] (tf7) {$7$};
+
+        \node[left=1em of tf1] (caption) {Исходное видео};
+
+        \path[arrowf] (tf1) edge (tf2);
+        \path[arrowf] (tf2) edge (tf3);
+        \path[arrowf] (tf3) edge (tf4);
+        \path[arrowf] (tf4) edge (tf5);
+        \path[arrowf] (tf5) edge (tf6);
+        \path[arrowf] (tf6) edge (tf7);
+
+        \node[framef, fill=red!20,      below of=tf1] (ff1) {$1$};
+        \node[framef, fill=yellow!20,   right of=ff1] (ff2) {$3$};
+        \node[framef, fill=orange!20,   right of=ff2] (ff3) {$2$};
+        \node[framef, fill=blue!20,     right of=ff3] (ff4) {$7$};
+        \node[framef, fill=cyan!50,     right of=ff4] (ff5) {$6$};
+        \node[framef, fill=cyan!20,     right of=ff5] (ff6) {$5$};
+        \node[framef, fill=green!20,    right of=ff6] (ff7) {$4$};
+
+
+        \node[left=1em of ff1] (caption) {
+            \parbox[c]{8em}{%
+                \raggedleft Видео с другим\\порядком кадров%
+            }%
+        };
+
+        \path[arrowf] (ff1) edge (ff2);
+        \path[arrowf] (ff2) edge (ff3);
+        \path[arrowf] (ff3) edge (ff4);
+        \path[arrowf] (ff4) edge (ff5);
+        \path[arrowf] (ff5) edge (ff6);
+        \path[arrowf] (ff6) edge (ff7);
+
+    \end{tikzpicture}
+\end{document}
+

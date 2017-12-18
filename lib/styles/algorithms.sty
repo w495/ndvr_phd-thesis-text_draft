@@ -1,0 +1,35 @@
+% !TeX encoding = UTF-8
+
+\usepackage[ruled,section]{.local/lib/styles/algorithms/algorithm}
+\usepackage[noend]{.local/lib/styles/algorithms/algorithmic}
+
+\newcommand{\rusbf}[1]{
+    \textcolor{blue}{\textbf{#1}}
+}
+
+\newcommand{\realgorithmic}{
+    \renewcommand{\algorithmicrequire}{\rusbf{Нужно:}}
+    \renewcommand{\algorithmicensure}{\rusbf{Есть:}}
+    \renewcommand{\algorithmicend}{\rusbf{Конец}}
+    \renewcommand{\algorithmicif}{\rusbf{Если}}
+    \renewcommand{\algorithmicthen}{\rusbf{то}}
+    \renewcommand{\algorithmicelse}{\rusbf{иначе}}
+    \renewcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+    \renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+    \renewcommand{\algorithmicfor}{\rusbf{Для}}
+    \renewcommand{\algorithmicforall}{\rusbf{Для всех}}
+    \renewcommand{\algorithmicdo}{\rusbf{выполняем}}
+    \renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+    \renewcommand{\algorithmicwhile}{\rusbf{Пока}}
+    \renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+    \renewcommand{\algorithmicloop}{\rusbf{Цикл}}
+    \renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+    \renewcommand{\algorithmicrepeat}{\rusbf{Повторить}}
+    \renewcommand{\algorithmicuntil}{\rusbf{До тех пор пока}}
+ }
+
+
+\usepackage{.local/lib/styles/algorithms/clrscode}
+
+
+

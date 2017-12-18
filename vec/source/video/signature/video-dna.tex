@@ -1,0 +1,91 @@
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    DFD-схема поиска по видео в нотации Йордона — Де Марко.%
+}
+
+
+\textwidth=28cm
+
+\begin{document}
+    \sf
+    \renewcommand{\arraystretch}{1.7}
+    \begin{tabular}{ccccccc}
+        &
+            \raisebox{-.4\height}{\includegraphics[width=3cm]{.local/img/ship-1-cl}}
+        &
+            $ \Rightarrow $
+        &
+            \raisebox{-.4\height}{\includegraphics[width=3cm]{.local/img/ship-1-bw}}
+        &
+            $ \Rightarrow $
+        &
+            \raisebox{-.4\height}{\includegraphics[width=3cm]{.local/img/ship-1-bw-2x2}}
+        &
+                $ \Rightarrow $
+        \\[4em]
+        &
+            \parbox{6em}{\begin{center}Исходное\\изображение\end{center}}
+        &
+        &
+            \parbox{6em}{\begin{center}Яркостная\\составляющая\end{center}}
+        &
+        &
+            \parbox{6em}{\begin{center}Огрублённое\\изображение\end{center}}
+        &
+        \\[2em]
+                $ \Rightarrow $
+        &
+            {
+                \renewcommand{\arraystretch}{1.7}
+                $
+                \left(
+                    \begin{array}{rr}
+                        172 & 164  \\
+                        125 & 114  \\
+                    \end{array}
+                \right)
+                $
+            }
+        &
+            $ \Rightarrow $
+        &
+            {
+                \renewcommand{\arraystretch}{1.7}
+                $
+                \left(
+                    \begin{array}{rr}
+                        1 & 2  \\
+                        3 & 4  \\
+                    \end{array}
+                \right)
+                $
+            }
+        &
+            $ \Rightarrow $
+        &
+                {
+                \renewcommand{\arraystretch}{1.0}
+                $
+                    \begin{array}{ccc}
+                        \mathbf{1, 2, 3, 4 }& \mathbf{\Rightarrow} & \mathbf{A}  \\
+                                & \cdots      &    \\
+                        4, 3, 1, 2 & \Rightarrow & W  \\
+                        4, 3, 2, 1 & \Rightarrow & X  \\
+                    \end{array}
+                $
+            }
+        &
+        \\[2em]
+        &
+            \parbox{6em}{\begin{center}Матрица\\яркости\end{center}}
+        &
+        &
+            \parbox{6em}{\begin{center}Порядок\\блоков\end{center}}
+        &
+        &
+            Символ
+        &
+    \end{tabular}
+\end{document}
+

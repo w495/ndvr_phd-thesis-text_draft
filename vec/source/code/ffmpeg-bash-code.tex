@@ -1,0 +1,15 @@
+
+\documentclass{.local/lib/classes/ndvr-vector-image-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Темпоральная модель визуального потока видео%
+}
+
+\textwidth=40em
+
+\begin{document}
+    \begin{minted}{bash}
+        ffmpeg -i '<input-stream>' -filter:v "yadif=1:-1:0,select='gt(scene,0 .4)',showinfo" -f 'null' -y 'qq' 2> >(grep 'pts_time' | sed -uE 's/ .*n:\s*?([0-9]+) .*pts:\s*?([0-9]+) .*pts_time:\s*?([0-9\ .]+) .*pos:\s*?([0-9]+) .* .*type:\s*?([IPB?]+) .* .*mean:\s*?\[( .+)\] .* .*stdev:\s*?\[( .+)\] .*/n:\1\tpts_time:\3\t\tframe_type:\5\tmean:\6 std:\7/gi');
+    \end{minted}
+\end{document}
+
