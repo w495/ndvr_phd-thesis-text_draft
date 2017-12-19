@@ -1,0 +1,95 @@
+
+«Эффект толпы, или Детектирование скопления людей в городе»
+
+http://www.racurs.ru/wiki/index.php/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%B7%D1%80%D0%B5%D0%BD%D0%B8%D0%B5
+
+
+ОБЗОР:
+    2007 video fingerprinting: features for duplicate and similar video detection and query-based video retrieval
+
+
+ОБЗОР:
+
+    2013 near-duplicate video retrieval current research and future trends
+    2013 a survey on multimodal content based video retrieval
+
+
+
+      adaptive classification-based articulation and tracking of video objects employing neural network retraining.pdf
+      an automatic video content classification scheme based on combined visual features model with modified dagsvm.pdf
+      an automatic video indexing method based on shot classification.pdf
+      an introduction to duplicate detection.pdf [2010]
+      a novel scheme for video similarity detection.pdf
+      a real-time near-duplicate video clip detection system.pdf
+      a study of low-complexity tools for semantic classification of mobile video.pdf
+[ + ] a suffix array approach to video copy detection in video sharing socialnetworks.pdf
+      a unified framework for video summarization, browsing & retrieval with applications to consumer and surveillance video.pdf
+      automatic classification of tv sports news video by multiple subspace method.pdf
+      automatic content-based retrieval and semantic classification of video content.pdf
+      automatic summarization of narrative video.pdf
+      automatic video classification a survey of the literature.pdf
+      automatic video classification.pdf
+      automatic video classification using holistic spatial features and optical flow.pdf
+      automatic video genre categorization using hierarchical svm.pdf
+      automatic video system for aircraft identification.pdf
+      beyond search event driven summarization for web videos.pdf
+      boosting web video categorization with contextual information from social web.pdf
+      challenges and techniques for effective and efﬁcient similarity search in large video databases.pdf
+      classification of animated video genre using color and temporal information.pdf
+      comparative performance of jm and ffmpeg codecs of h.264 avc video compression standard.pdf
+      comparison of sequence matching techniques for video copy detection.pdf
+      content-based video classification using support vector machines.pdf [2008]
+      detecting cartoons: a case study in automatic video-genre classification.pdf
+      detection of video sequences using compact signatures.pdf
+      efficient near-duplicate detection and sub-image retrieval.pdf
+      efficient video similarity measurement and search.pdf [2002] [dissertation]
+      efficient video similarity measurement with video signature.pdf [2002]
+      em-based mixture models applied to video event detection (intech).pdf
+      fast and robust detection of near-duplicates in web video database.pdf
+      hammoud interactive video algorithms and technologies.pdf
+      high-confidence near-duplicate image detection.pdf
+      image and video databases restoration, watermarking, and retrieval.pdf [2000]
+      image and video retrieval 1.pdf [2002]
+      image and video retrieval 3.pdf [2004]
+      image and video retrieval 4.pdf [2005]
+      image and video retrieval 5.pdf [2006]
+      image and video retrieval-springer(2006).pdf
+      improving bag-of-visual-words model with spatial-temporal correlation for video retrieval.pdf
+      introduction to video search engines-springer.pdf [2008]
+[ + ] large-scale near-duplicate web video search.pdf
+      learning and classification of semantic concepts in broadcast video.pdf
+      looking at near-duplicate videos from a human-centric perspective.pdf
+      matching local self-similarities across images and videos.pdf
+[ ! ] million-scale near-duplicate video retrieval system.pdf [2011]
+      near-duplicate detection for images and videos.pdf
+      near-duplicate video detection featuring coupled temporal and perceptual visual structures and logical inference based matching.pdf
+[ + ] near-duplicate video retrieval based on clustering by multiple sequence alignment.pdf
+      news video classification usingclassifiers and combinationsvm-based multimodal strategies.pdf
+[ + ] non-identical duplicate video detection.pdf
+      on the annotation of web videos by efficient near-duplicate search.pdf [2010]
+      performance characterization of video-shot-change detection methods.pdf
+      practical elimination of near-duplicates from web video search.pdf
+      probabilistic near-duplicate detection using simhash.pdf
+[+/-] real-time large scale near-duplicate web video identification.pdf
+[???] real-time near-duplicate elimination for web video search with content and context.pdf
+      robust video signature based on ordinal measure.pdf
+      robust voting algorithm based on labels of behavior for video copy detection.pdff
+      spatio-temporal features for-robust content-based video copy detection.pdf
+      the influence of cross-validation on video classification performance.pdf
+      understanding near-duplicate videos: a user-centric approach.pdf
+      video-based automatic target recognition.pdf
+      video classification using transform coefficients.pdf
+      video copy detection using temporally informative representative images.pdf
+      video data management and information retrieval.pdf
+      video genre categorization and representation using audio-visual information.pdf
+      video google: a text retrieval approach to object matching in videos.pdf
+      video hyperlinking: libraries and tools for threading and visualizing large video collection.pdf
+      video retrieval and summarization.pdf
+      video retrieval by mimicking poses.pdf
+      video retrieval of near-duplicates using k-nearest neighbor retrieval of spatio-temporal descriptors.pdf
+      video scene change detection method using unsupervised segmentation and object tracking.pdf
+      video search and mining.pdf [2010]
+      video sequence matching using singular value decomposition.pdf
+
+Inf. Proc. & Man. 48(3), 489-501, 2012
+
