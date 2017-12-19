@@ -1,30 +1,27 @@
 %& -shell-escape
-% !TeX root = thesis-abstract.tex
+% !TeX root = thesis-text.tex
 % !TeX encoding = UTF-8
 % !TeX program = XeLaTeX
 
 \documentclass{.local/lib/classes/ndvr-super-article}
 
-\title[NDVR thesis-abstract]{%
-    Автореферат диссертации
-    «Поиск нечетких дубликатов видео»%
-}
-
-\providecommand{\DefenseCouncilNumber}{
-    \textcolor{red!80!black}{Д 987.654.321}
+\title[NDVR thesis]{%
+    Диссертация «Поиск нечетких дубликатов видео»%
 }
 
 \begin{document}
     \begin{spacing}{1.2}
-        \relimport{titlepage}
+        \relimport{glossary}
+        \relimport{what-for}
+        
         %\relimport{annotation}
         %\tableofcontents
-        \pagebreak
-        \relimport{description}
-        \relimport{content}
-        \relimport{results}
-        \pagebreak
-        \relimport{publications}
+        % \pagebreak
+        % \relimport{description}
+        % \relimport{content}
+        % \relimport{results}
+        % \pagebreak
+        % \relimport{publications}
     \end{spacing}
 \end{document}
 

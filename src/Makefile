@@ -5,7 +5,7 @@
 ## ##################################################################
 
 ## 	The name of current paper.
-PAPER_NAME=thesis-abstract
+PAPER_NAME=thesis-text
 
 ## 	Current directory path.
 PAPER_HOME=.local

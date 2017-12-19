@@ -11,7 +11,7 @@
 ]{standalone}
 
 \titleformat{\section}[block]
-    {\bfseries\LARGE\sffamily\raggedright}%
+    {\bfseries\huge\sffamily\raggedright}%
     {}%
     {0ex}%
     {\MakeUppercase}%

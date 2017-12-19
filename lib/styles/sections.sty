@@ -70,11 +70,15 @@
 
 \ifthenelse{ \boolean{xetex} }{
 
-\titleformat{\section}[block]{\bfseries\large\sffamily\centering}
+
+\titleformat{\section}[block]{\bfseries\LARGE\sffamily\raggedright}
     {\arabic{section}.}{1ex}{\centering\MakeUppercase}{}
 
-\titleformat{\subsection}[block]{\bfseries\large\sffamily\centering}
+\titleformat{\subsection}[block]{\bfseries\Large\sffamily\raggedright}
     {\arabic{section}.\arabic{subsection}.}{1ex}{\MakeUppercase}{}
+
+\titleformat{\subsubsection}[block]{\bfseries\large\sffamily\raggedright}
+    {\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}{1ex}{\MakeUppercase}{}
 
 
 % \titleformat{\part}[block]{\bfseries\Huge\sffamily\raggedright}
