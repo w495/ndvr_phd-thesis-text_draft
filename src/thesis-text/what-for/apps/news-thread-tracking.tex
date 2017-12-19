@@ -1,0 +1,164 @@
+%& -shell-escape
+% !TeX root = thesis-text.tex
+% !TeX encoding = UTF-8
+% !TeX program = XeLaTeX
+
+\documentclass{.local/lib/classes/ndvr-super-article-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Проблема поиска нечетких дубликатов видео%
+}
+
+\begin{document}
+
+    \section{Группировка новостей}
+
+    Как~показано в~работе \cite{Zhao:2007}, 
+    поиск нечётких дубликатов удобно использовать для~просмотра
+    видео-материалов о~событиях, размещенных в~разных СМИ.
+    Видео часто показывают очень похожие визуальные изображения и~ролики,
+    но~с~совершенно различной трактовкой.
+
+    На рисунках~\ref{fig:news-thread-tracking-unarmed-civilians},
+    \ref{fig:news-thread-tracking-residents} и
+    \ref{fig:news-thread-tracking-forces} 
+    показаны примеры трёх различных трактовок одного 
+    и того же видео-материала на различных новостных сайтах.
+    \begin{enumerate}
+        \item Рисунок~\ref{fig:news-thread-tracking-residents},
+            трактовка новостного портала
+            \href{http://rt.com}%
+            {rt.com}\footnote{
+                Материал взят со страницы 
+                \href{https://www.rt.com/news/157456-ukraine-soldiers-compensation-odessa/}%
+                {https://www.rt.com/news/157456-ukraine-soldiers-compensation-odessa/}.
+                Полную копию можно найти на странице
+                \href{http://darkroom.baltimoresun.com/2014/05/table-tennis-kettling-and-results-of-a-mine-collapse-may-2/topshots-ukraine-russia-politics-crisis-slavyansk/}%
+                {http://darkroom.baltimoresun.com/2014/05/table-tennis-kettling-and-results-of-a-mine-collapse-may-2/topshots-ukraine-russia-politics-crisis-slavyansk/}.
+            }.
+            \begin{description}
+                \item Комментарий:\textit{
+                    \begin{english}
+                        ``Residents gather to speak 
+                        to Ukrainian soldiers
+                        at a checkpoint which they s
+                        eized in~the~early morning
+                        in~the~village of~Andreevka,
+                        7 kms from~the~centre 
+                        of~the~southern Ukrainian city of~Slavyansk,
+                        on~May 2, 2014.''
+                    \end{english}
+                }
+                \item Перевод:\textit{
+                    «Местные жители собираются,
+                    чтобы поговорить с~украинскими 
+                    военными на~блокпосту,
+                    который те захватили утром в~селе Андреевка,
+                    7~км от~центра Славянска, 2 мая 2014 года.»
+                }
+            \end{description}
+        \item Рисунок~\ref{fig:news-thread-tracking-unarmed-civilians},
+            трактовка политического сайта
+            \href{http://www.eyeopening.info}%
+            {eyeopening.info}\footnote{
+                Материал взят со страницы 
+                \href{http://www.eyeopening.info/2014/05/04/images-video-east-ukraine-corporate-media-will-never-show/ukraine-confict-f}%
+                {http://www.eyeopening.info/2014/05/04/images-video-east-ukraine-corporate-media-will-never-show/ukraine-confict-f}.
+            }.
+            \begin{description}
+                \item Комментарий:\textit{
+                    \begin{english}
+                        ``Unarmed civilians put themselves
+                        in~the~path of~armored vehicles 
+                        in~their attempt to~stop
+                        the~Ukrainian military 
+                        from~entering Slavyansk.''
+                    \end{english}
+                }
+                \item Перевод:\textit{
+                    «Безоружные мирные граждане 
+                    встали на~пути бронетехники
+                    и~пытаются остановить украинских 
+                    военных при~входе в~Славянск»
+                }.
+            \end{description}
+        \item Рисунок~\ref{fig:news-thread-tracking-forces},
+            трактовка новостного сайта 
+            \href{http://ewn.co.za}%
+            {ewn.co.za}\footnote{
+                Материал взят со страницы 
+                \href{http://ewn.co.za/2014/07/01/Ukraine-forces-attack-rebel-positions}
+                {http://ewn.co.za/2014/07/01/Ukraine-forces-attack-rebel-positions}.
+            }.
+            \begin{description}
+                \item Комментарий:  \textit{
+                    \begin{english}
+                        ``Ukrainian~forces struck 
+                        at pro-Russian separatist
+                        bases in~eastern regions on~Tuesday.''
+                    \end{english}
+                }
+                \item Перевод:  \textit{
+                    «Во~вторник украинские вооруженные 
+                    силы нанесли удар по~базам 
+                    пророссийских сепаратистов 
+                    в~восточных регионах страны.»
+                }
+            \end{description}
+    \end{enumerate}
+
+
+    СМИ, поддерживающие противоположные позиции,
+    могут описать ситуацию по-разному,
+    но~визуальное содержание, всего скорее, будет близким.
+    Часто в качестве новости сообщатся не набор фактов,
+    а частное мнение автора сюжета.
+    Обнаружение и~группировка таких материалов позволят
+    получать более полное представление о~происходящем
+    с~учетом различных точек зрения.
+
+    \begin{figure}[H]
+        \includegraphics[width=\textwidth]%
+            {.local/img/video/apps/news-thread-tracking-ua-4.png}%
+        \caption{%
+            Пример подачи визуальной информации с сайта
+            \href{http://rt.com/}{rt.com}
+        }
+        \label{fig:news-thread-tracking-residents}
+    \end{figure}
+
+    \begin{figure}[p]
+        \includegraphics[width=\textwidth]%
+            {.local/img/video/apps/news-thread-tracking-ua-1.png}%
+        \caption{%
+            Пример подачи визуальной информации c сайта 
+            \href{http://www.eyeopening.info/}%
+            {eyeopening.info}
+        }
+        \vspace{4em}
+        \label{fig:news-thread-tracking-unarmed-civilians}
+        \includegraphics[width=\textwidth]%
+            {.local/img/video/apps/news-thread-tracking-ua-3.png}%
+        \caption{%
+            Пример подачи визуальной информации с сайта 
+            \href{http://ewn.co.za}{ewn.co.za}
+        }
+        \label{fig:news-thread-tracking-forces}
+    \end{figure}
+
+
+
+
+    % \begin{figure}
+    %     \includegraphics[width=14cm]{.local/img/video/apps/video-thread-tracking-1-russia.png}%
+    %     \caption{Видео, в~котором беспорядки в~Греции выданы,
+    %         за~акцию протеста в~Москве.
+    %         Заголовок:~«Protester's Express Outrage
+    %         Ove.russian Elections~— Fox News».
+    %         Перевод:~«Негодование протестующих из-за~результатов российских
+    %         выборов~— Фокс-Ньюc»
+    %     }
+    % \end{figure}
+
+
+\end{document}

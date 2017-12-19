@@ -1,0 +1,82 @@
+%& -shell-escape
+% !TeX root = thesis-text.tex
+% !TeX encoding = UTF-8
+% !TeX program = XeLaTeX
+
+\documentclass{.local/lib/classes/ndvr-super-article-standalone}
+
+\title[NDVR thesis-abstract]{%
+    Проблема поиска нечетких дубликатов видео%
+}
+
+\begin{document}
+
+    \section{Ранжирование результатов поиска}
+
+    Обычно в~поисковой выдаче требуется группировать 
+    одинаковые видео по~одним и~тем~же ключевым словам запроса.
+    Но чаще всего поисковые машины возвращают список дубликатов.
+    На рисунках~\ref{fig:video-reranking-mailru},
+    \ref{fig:video-reranking-yandex},
+    \ref{fig:video-reranking-vk} и
+    \ref{fig:video-reranking-youtube} 
+    показаны примеры неудачного ранжирования результатов
+    для различных сервисов интернет-видео. 
+    
+    
+    \begin{figure}[htp]
+        \includegraphics[width=0.8\textwidth]{.local/img/video/apps/video-reranking-mailru.png}
+        \caption{
+            Неудачное ранжирование при~поиске «Faszination~Korallenriff~(2011)».
+            Сервис Mail.ru.
+        }
+        \label{fig:video-reranking-mailru}
+        \vspace{2em}
+        \includegraphics[width=0.8\textwidth]{.local/img/video/apps/video-reranking-yandex.png}
+        \caption{
+            Неудачное ранжирование при~поиске «Faszination Korallenriff (2011)».
+            Сервис Яндекс.
+        }
+        \label{fig:video-reranking-yandex}
+    \end{figure}
+
+    \begin{figure}[htp]
+        \includegraphics[width=0.8\textwidth]{.local/img/video/apps/video-reranking-vk.png}
+        \caption{
+            Неудачное ранжирование при~поиске «Faszination~Korallenriff~(2011)».
+            Сервис Вконтакте (\href{http://vk.com/}{vk.com}).
+        }
+        \label{fig:video-reranking-vk}
+        \vspace{2em}
+        \includegraphics[width=0.8\textwidth]{.local/img/video/apps/video-reranking-youtube.png}
+        \caption{
+            Ранжирование при~поиске «Faszination~Korallenriff~(2011)».\\
+            Сервис YouTube.
+        }
+        \label{fig:video-reranking-youtube}
+    \end{figure}
+
+    Качество поисковой выдачи можно улучшить тремя способами.
+    \begin{enumerate}
+        \item   Оставить в поисковой выдачи только 
+                самые свежие копии видео.
+        \item   Удалить нечётки дубликаты 
+                из~верхней части списка \cite{Wu:2007a}.
+        \item   Сгруппировать оригинальные видео \cite{Huang:2010a}.
+    \end{enumerate}
+
+    В~первом и во втором случае новизна результатов
+    в~рейтинговом списке значительно увеличится.
+    В~то~же время, видео, которое интересовало пользователя,
+    может быть расположено слишком далеко от~начала страницы.
+    Похожие видео могут потребоваться пользователям как~дополнительный
+    источник информации.
+    Например, видео в~конкретном разрешении и~форматах,
+    с~различными субтитрами, аудио и~пр.  \cite{Cherubini:2009}
+
+    Во~третьем случае описанной проблемы нет.
+    Новые результаты просто можно выделить тем или~иным образом.
+    Для всех трёх вариантов требуется эффективный поиск
+    нечётких дубликатов видео.
+
+\end{document}
