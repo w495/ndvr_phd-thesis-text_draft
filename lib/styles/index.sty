@@ -11,7 +11,9 @@
 
 \newcommand{\glem}[2]{\glslink{#1}{{\color{blue!20!black}#2}}}
 
-\usepackage{makeidx}
+\usepackage[xindy]{imakeidx}   
+
+% \usepackage{makeidx}
 
 % % \renewcommand{\index}[1]{\glossary{#1}}
 
@@ -26,13 +28,24 @@
 %% настройка параметров предметного указателя
 %%
 
-\let\oldindex\index
-\renewcommand*{\index}[1]{\noindent\oldindex{#1}\ignorespaces}
+\makeindex[
+    program=xindy,
+    options={-v -M texindy -L russian -C utf-8 -M bonus}
+    %options={-s ./.local/lib/index.ist }
+]
 
-    \makeindex % указываем для предметного указателя
+% \makeindex
+
+\newcommand{\BH}[1]{\hyperpage{#1}}
 
 \let\oldindex\index
-\renewcommand*{\index}[1]{\noindent\oldindex{#1}\ignorespaces}
+\renewcommand*{\index}[1]{\noindent\oldindex{#1|hyperpage}\ignorespaces}
+
+\providecommand*\lettergroup[1]{%
+  \par\textbf{\textcolor{red}{\sf#1}}\par
+  \nopagebreak
+}
+
 
 %%
 %% переопределим окружение предметного указателя
