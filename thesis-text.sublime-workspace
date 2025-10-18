@@ -1,1 +1,2309 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"center",
+				"centering\ttex"
+			],
+			[
+				"ragg",
+				"raggedright\ttex"
+			],
+			[
+				"newc",
+				"newcommand{cmd}[args][default]{def}\tlatex-document"
+			],
+			[
+				"pageb",
+				"pagebreak\tlatex-document"
+			],
+			[
+				"cdo",
+				"cdots\tlatex-document"
+			],
+			[
+				"parb",
+				"parbox{width}{text}\tlatex-document"
+			],
+			[
+				"nor",
+				"norm"
+			],
+			[
+				"newcom",
+				"newcommand{cmd}[args][default]{def}\tlatex-document"
+			],
+			[
+				"fb",
+				"fbox{text}\tlatex-document"
+			],
+			[
+				"cl",
+				"clean_all"
+			],
+			[
+				"s",
+				"src"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/thesis-text.tex",
+			"settings":
+			{
+				"buffer_size": 857,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/classes/base/any-document.cls",
+			"settings":
+			{
+				"buffer_size": 1420,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/classes/base/super-article.cls",
+			"settings":
+			{
+				"buffer_size": 1436,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n  \"type\": \"postgresql_cluster\",\n  \"projectId\": \"99963e24-a756-495e-8543-df7f8ea1c7a5\",\n  \"name\": \"vh_prod_cluster\",\n  \"environment\": \"production\",\n  \"infrastructureOptions\": {\n      \"instanceType\": \"db1.micro\",\n      \"volumeSize\": 16106127360,\n      \"hosts\": [\n          {\n              \"options\": {\n                  \"geo\": \"man\"\n              }\n          },\n          {\n              \"options\": {\n                  \"geo\": \"sas\"\n              }\n          },\n          {\n              \"options\": {\n                  \"geo\": \"vla\"\n              }\n          }\n      ]\n  },\n  \"databaseOptions\": {\n      \"databases\": [\n          {\n              \"name\": \"vh_prod\",\n              \"options\": {\n                  \"owner\": \"vh_admin\",\n                  \"extensions\": [\n                      {\n                           \"name\": \"btree_gist\"\n                      }\n                  ]\n              }\n          }\n      ],\n      \"version\": \"9.6\",\n      \"users\": [\n          {\n            \"name\": \"vh_admin\",\n            \"options\": {\n                \"password\": \"vammeefmecphidnubBormowlagPatEt8\",\n                \"conn_limit\": 100\n            }\n          }\n      ],\n      \"pooler\": {\n          \"pool_mode\": \"session\"\n      },\n      \"postgres\": {\n          \"wal_level\": \"logical\"\n      }\n  }\n}\n",
+			"file": "/tmp/mozilla_w4950/pgaas.json",
+			"file_size": 1284,
+			"file_write_time": 131673100333854423,
+			"settings":
+			{
+				"buffer_size": 1284,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n    \"name\": \"vh_ott\",\n    \"options\": {\n        \"password\": \"PeOmkackoghEsichEnufCocnelErejvi\",\n        \"conn_limit\": 10\n    }\n}\n",
+			"file": "/tmp/mozilla_w4950/pgaas_add_user.json",
+			"file_size": 130,
+			"file_write_time": 131673135253379018,
+			"settings":
+			{
+				"buffer_size": 130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n    \"name\": \"vh_ott\",\n    \"options\": {\n        \"password\": \"IghyazOwEfwephlyRibnugTatIsOgDyb\",\n        \"conn_limit\": 10\n    }\n}\n",
+			"file": "/tmp/mozilla_w4950/pgaas_add_user-1.json",
+			"file_size": 130,
+			"file_write_time": 131673200425978757,
+			"settings":
+			{
+				"buffer_size": 130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/__init__.tex",
+			"settings":
+			{
+				"buffer_size": 676,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/what-for/reranking.tex",
+			"settings":
+			{
+				"buffer_size": 3050,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/what-for/news-thread-tracking.tex",
+			"settings":
+			{
+				"buffer_size": 6864,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "bib/all.bib",
+			"settings":
+			{
+				"buffer_size": 139656,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/what-for/recommendations.tex",
+			"settings":
+			{
+				"buffer_size": 2361,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/video-amount.tex",
+			"settings":
+			{
+				"buffer_size": 4489,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/styles/index.sty",
+			"settings":
+			{
+				"buffer_size": 2092,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".latexmkrc",
+			"settings":
+			{
+				"buffer_size": 704,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/.latexmkrc",
+			"settings":
+			{
+				"buffer_size": 602,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/index/multilingual.xdy",
+			"settings":
+			{
+				"buffer_size": 964,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/.latexmkrc",
+			"settings":
+			{
+				"buffer_size": 596,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/what-for/copyright.tex",
+			"settings":
+			{
+				"buffer_size": 2504,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/what-for/monitoring.tex",
+			"settings":
+			{
+				"buffer_size": 2254,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/definitions.tex",
+			"settings":
+			{
+				"buffer_size": 9399,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/styles/fonts/xetex-fonts.sty",
+			"settings":
+			{
+				"buffer_size": 1065,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/thesis-text/ndvr-problem/what-for/cctv.tex",
+			"settings":
+			{
+				"buffer_size": 2573,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/thesis-text/publications.tex",
+			"settings":
+			{
+				"buffer_size": 401,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\begin{document}\n    \\standalonetoc\n\n    \\section{Проблема поиска нечетких дубликатов видео}\n\n    \\begin{shiftdownsection}\n        \\relimport{abstract-ru}\n        \\relimport{problem}\n        \\relimport{apps}\n        \\relimport{defs}\n        \\relimport{r-and-i}\n        %\\relimport{outro}\n    \\end{shiftdownsection}\n\n    \\standalonebiblio{Список использованных источников}{bibliography/what-for}\n\n\\end{document}\n\n\n",
+			"file": "src/thesis-text/what-for/what-for.tex",
+			"file_size": 669,
+			"file_write_time": 131580419170149443,
+			"settings":
+			{
+				"buffer_size": 576,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Проблема поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n    \\standalonetoc\n\n    \\section{Проблема поиска нечетких дубликатов видео}\n\n    \\begin{shiftdownsection}\n        \\relimport{abstract-ru}\n        \\relimport{video-amount}\n        \\relimport{application-area}\n        \\relimport{definitions}\n        % \\relimport{r-and-i}\n        %\\relimport{outro}\n    \\end{shiftdownsection}\n\n    %\\standalonebiblio{Список использованных источников}{bibliography/what-for}\n\n\\end{document}\n\n\n",
+			"file": "src/thesis-text/what-for/__init__.tex",
+			"file_size": 818,
+			"file_write_time": 131581662633791697,
+			"settings":
+			{
+				"buffer_size": 684,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\begin{document}\n\n\n    \\pagebreak\n\n    \\section{Подходы к определению понятия НДВ}\n\n\n    Тема поиска нечётких дубликатов видео \n    относительно нова для~научного сообщества.\n    И~потому существует целый ряд различных толкований и~определений.\n    Наиболее употребляемые определения\n    Ву \\cite{Wu:2007a}, Шена \\cite{Shen:2007},\n    Башарата \\cite{Basharat:2008}, и~Керубини \\cite{Cherubini:2009},\n    представленные далее, относятся к~одному и~тому~же.\n\n    \\subsection{Нечеткие дубликаты по~Ву}\n\n    Нечеткие дубликаты видео~— идентичные или~приблизительно идентичные видео,\n    почти точные копии друг друга,\n    но~отличающийся\n        форматами файлов,\n        параметрами кодирования,\n        светоизмерительными параметрами (цветность, яркость),\n        применением монтажа (титры, логотип, рамка),\n        длиной\n        и~набором модификаций (вставка или~удаление кадров) \\cite{Wu:2007a}.\n\n    \\begin{figure}[H]\n        \\includegraphics[width=\\textwidth]%\n            {.local/vec/out/pdf/ndv-missile-definition-1-wu}%\n        \\caption{\n            Иллюстрация определения НДВ по~Ву \\cite{Wu:2007a}.\\\\\n            В~верхнем левом углу~— оригинал изображения.\n        }\n    \\end{figure}\n\n\n    \\subsection{Нечеткие дубликаты по~Шену}\n\n    Нечеткие дубликаты видео~— клипы,\n    которые похожи или~почти дублируют друг от~друга, но~выглядят по-разному.\n    Они~отличаются в~силу\n        разных условий съемки\n            (точка обзора и~настройки камеры, условия освещения,\n            фон, передний план, и~т.~д.),\n        преобразований\n            (формат видео, частота кадров, разрешение, сдвиг, обрезка, гамма, контраст,\n            яркость, насыщенность, размытие, выдержка, резкость и~т.~д.),\n        операции монтажа\n            (вставка, удаление, перемена мест кадров и~модификация содержимого)\n        \\cite{Shen:2007}.\n\n    \\begin{figure}[H]\n        \\includegraphics[width=\\textwidth]%\n            {.local/vec/out/pdf/ndv-missile-definition-2-shen}%\n        \\caption{\n            Иллюстрация определения НДВ по~Шену \\cite{Shen:2007}.\\\\\n            В~верхнем левом углу~— оригинал изображения.\n        }\n    \\end{figure}\n\n\n    \\subsection{Нечеткие дубликаты по~Башарату}\n\n    Нечеткие дубликаты видео~— изображение того~же эпизода\n    (например, «беспилотный летательный аппарат в~воздухе») при~различных точках обзора,\n    размерах видео, ландшафте, погодных условиях, моделях БПЛА и~движениях камеры.\n    Одна и~та~же смысловая концепция может\n    быть выражена в~различной форме, при~разном освещении,\n    и~параметрах сцены \\cite{Basharat:2008}.\n\n\n    \\begin{figure}[H]\n        \\includegraphics[width=\\textwidth]%\n            {.local/vec/out/pdf/ndv-missile-definition-3-basharat}\n        \\caption{\n            Иллюстрация определения НДВ по~Башарату \\cite{Basharat:2008}.\\\\\n            В~верхнем левом углу~— оригинал изображения.\n        }\n    \\end{figure}\n\n    \\pagebreak\n\n    \\subsection{Нечеткие дубликаты по~Керубини}\n\n    Нечеткие дубликаты видео~— приблизительно одинаковые видео,\n    которые могут отличаться параметрами кодирования,\n    светоизмерительными параметрами (цветность, яркость),\n    применением монтажа (титры, логотип), или~наложением  аудио.\n    Идентичные видео с~соответствующей дополнительной информацией,\n    в~любом из~них (изменения длины клипа или~сцен) рассматриваются как~НДВ.\n    Два различных видео с~разным представлением и~сценарии,\n    считают НДВ, если они~используют одинаковую семантику,\n    и~ни~одного из~них нет~дополнительной информации \\cite{Cherubini:2009}.\n\n    \\begin{figure}[H]\n        \\includegraphics[width=\\textwidth]%\n            {.local/vec/out/pdf/ndv-missile-definition-4-cherubini}\n        \\caption{\n            Иллюстрация определения НДВ по~Керубини \\cite{Cherubini:2009}.\\\\\n            В~верхнем левом углу~— оригинал изображения.\n        }\n    \\end{figure}\n\n    \\pagebreak\n\n    \\subsection{Сравнение определений}\n\n    На~данный момент до~сих пор не~существует единого\n    определения нечетких дубликатов видео.\n    Чаще всего в~работах используется определения Ву и~Шена.\n    Однако определения сводятся, к~тому, что~НДВ должны нести очень\n    близкую визуальную информацию, выражающих одинаковый смысл.\n\n    Самое узкое определение дано в~работе Ву и~др.,\n    Только идентичные и~приблизительно идентичные видео\n    для~одного того~же сюжета с~незначительными фотографическими различиями\n    и~правками расценены как~НДВ.\n    Формально это определение совпадает\n    с~понятием «копии видео» в~работе \\cite{Law-To:2007}\n    Видео-копией в~работе названы отрывки, идентичные по~смыслу,\n    но~отличающиеся светоизмерительными или~геометрическими характеристиками.\n\n    Аналогично проект TRECVID \\cite{Over:2011} определяет копию, как\n    «сегмент видео, полученный из~другого видео,\n    как~правило, с~помощью различных преобразований,\n    таких как~дополнение, удаление, модификация\n    (ориентации, цвета, контраста, кодирование),\n    перезапись и~т.~д.\n    Для~задачи обнаружения копий на~основе \n    содержимого в TRECVID выделяют восемь\n    трансформаций в~том числе:\n        имитации аналоговой перезаписи,\n        картинку в~картинке,\n        вставку рисунка,\n        повторное кодирование,\n        изменение гаммы,\n        снижения качества,\n        компоновку видео\n    и~комбинации из~трех случайно выбранных преобразований.\n\n    В~работе Шена и~др. \\cite{Shen:2007} определение НДВ распространяется\n    на~фильмы с~одинаковой смысловой концепцией, но~снятые при~разных условиях.\n\n    Башарат и~др. \\cite{Basharat:2008}  \n    предлагают еще~более общее определение.\n    НДВ являются видео, изображающие одно и~то~же смысловое явление\n    при~определенных обстоятельствах.\n\n\n    В~целях вовлечения психофизического восприятия в~определение НДВ,\n    Керубини и~соавторы \\cite{Cherubini:2009} сделали масштабный интернет-опрос.\n    Результаты этого опроса показывают, что~именно конечные пользователи\n    считают нечеткими дубликатами.\n    Человеческое восприятие НДВ отвечает\n    многим свойствам формального определения\n    относительно манипуляций с~визуальным содержанием\n    \\cite{Wu:2007a, Shen:2007}.\n\n    Если в~сходные отрывки внесена дополнительная информация,\n    то с точки зрения испытуемых, \n    они~уже не~воспринимаются как~нечеткие дубликаты.\n    С~другой стороны, два разных видео с~различными героями\n    при~различных сценариях оценены как~дубликаты, т.~к. они~имеют общий смысл,\n    при~условии, что~ни~один из~роликов не~имеет дополнительной информации.\n\n    Исследование подтверждает, что~пользователи считают \n    нечёткими дубликатами,\n    видео, которые визуально подобны и~семантически идентичны.\n    Это не~совпадает обычным поиском по~содержимому,\n    т.~к. сходство контента является \n    единственным фактором, который нужно учитывать.\n    А~в~случае с~пользовательским определением необходимо проверять\n    и~семантику и~ее представление.\n\n    Поиск НДВ может быть расценен как~мост\n    между~традиционным поиском основанным на~подобии содержимого\n    — у~видео должно быть подобное визуальное\n    представление независимо от~семантики —\n    и~смысловым видео-поиском\n    — у~видео должна быть соответствующая\n    семантика независимо от~представления.\n\n\n\n    % Существует несколько различных понятий:\n    % частичные нечеткие дубликаты, нечеткие дубликаты, копии, и~полные дубликаты.\n\n    % Полные дубликаты семантически и~визуально идентичны с~исходным видео,\n    % Они~имеют в~точности одинаковый сюжет, сценарий  и~т.~д.\n\n    % Копии совместно используют ту~же семантику и~сцены что~и~оригинал,\n    % но~отличаются визуальным представлением.\n    % Копии могут быть получены в~результате \n    % разнообразных преобразований и~правок.\n    % В~эту категорию попадают видео с~изменениями в~цвете,\n    % яркостью, контрасте, частотой кадров, и~т.~д.,\n    % или~с~добавлением баннеров, логотипов, и~т.~д.,\n    % Таким образом, они~выражают в~точности одинаковые сюжет и~сцены,\n    % но~с~визуальными различиями.\n\n    % Нечеткие дубликаты используют одну и~ту~же семантику,\n    % но~их внешний вид может отличаться.\n\n    % Частичные нечеткие дубликаты, \n    % обычно имеют большое семантическое\n    % и~визуальное несоответствие на~уровне целых видео.\n    % Они~совместно используют похожие \n    % (нечетко дублирующихся) отрывки друг друга,\n    % или~даже области отдельных изображений.\n    % Например, два длинных видео с~совершенно разными сюжетами\n    % но~со~сходными фрагментами или~областями включая\n    % изображения в~одинаковых местах повествования.\n\n\\end{document}\n\n",
+			"file": "src/thesis-text/what-for/definitions.tex",
+			"file_size": 14252,
+			"file_write_time": 131581333410256386,
+			"settings":
+			{
+				"buffer_size": 8659,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vec/source/ndv/drone/ndv-drone-definition-1-wu.tex",
+			"settings":
+			{
+				"buffer_size": 876,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vec/source/ndv/drone/ndv-drone-definition-2-shen.tex",
+			"settings":
+			{
+				"buffer_size": 1522,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vec/source/ndv/drone/ndv-drone-definition-3-basharat.tex",
+			"settings":
+			{
+				"buffer_size": 2849,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vec/source/ndv/drone/ndv-drone-definition-4-cherubini.tex",
+			"settings":
+			{
+				"buffer_size": 2865,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vec/source/ndv/missile/ndv-missile-definition-1-wu.tex",
+			"settings":
+			{
+				"buffer_size": 889,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vec/source/ndv/missile/ndv-missile-definition-2-shen.tex",
+			"settings":
+			{
+				"buffer_size": 1540,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vec/source/ndv/missile/ndv-missile-definition-3-basharat.tex",
+			"settings":
+			{
+				"buffer_size": 2907,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vec/source/ndv/missile/ndv-missile-definition-4-cherubini.tex",
+			"settings":
+			{
+				"buffer_size": 2924,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/classes/ndvr-super-article-standalone.cls",
+			"settings":
+			{
+				"buffer_size": 581,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/styles/sections.sty",
+			"settings":
+			{
+				"buffer_size": 4140,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "#!/usr/bin/env perl\n\n@default_files=(\n    '__init__.tex',  \n);\n$do_cd=1;\n$recorder=1;\n$bibtex_use=2;\n$pdf_mode = 5;\n$postscript_mode = $dvi_mode = 0;\n$makeindex=\"export openout_any='a'; makeindex %O -o %D %S\";\n$bibtex=\"export openout_any='a'; bibtex %O %S\";\n$xelatex=\"xelatex -shell-escape -no-pdf %O %S\";\n$pdflatex=\"pdflatex -shell-escape %O %S\";\n$latex=\"latex --shell-escape %O %S\";\n$aux_dir=\"/tmp/latexmk/src\";\n$out_dir=\"/tmp/latexmk/src\";\n$show_time=1;\n",
+			"file": "src/thesis-text/what-for/.latexmkrc",
+			"file_size": 457,
+			"file_write_time": 131580431822990446,
+			"settings":
+			{
+				"buffer_size": 457,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\begin{document}\n\n    \\section{Постановка проблемы}\n\n    % Связанные с~видео онлайн-услуги,\n    % такие как~публикация и~распространения видео,\n    % трансляция видео, видео-рекомендации и~пр,\n    % все более и~более смещают сферу интересов пользователей.\n    % Сейчас пользователи не~только могут искать и~просматривать видео,\n    % но~и~заниматься редактированием, размещением и~вещанием.\n\n    \\subsection{Рост потребления видео}\n\n    Согласно данным аналитической компании «ComScore»\n    \\index{comScore}\\footnote{\n        ComScore (ориг. «comScore») – \n        агентство, занимающееся анализом рынка интернет-технологий.\n        Официальный сайт: \\href{http://comScore.com}{comscore.com}.\n    },\n    Россия — ведущая страна Европы по~зрителям интернет-видео\n    и~вторая по~числу просмотров в~месяц \\cite{Henni:2013}.\n\n    Количество видео размещенных на~русскоязычных\n    сайтах за~период с~июня 2012 до~июня 2013 года выросло\n    на~16\\%, с~7,9 миллионов до~9,1 миллионов.\n\n    В 2013 году число российских интернет-зрителей \n    старше 15 лет превысило 55~миллионов\\cite{Onishenko:2013}. \n    В январе 2017 года общее число уникальных \n    посетителей видео-ресурсов превысило 74,4~миллиона\\footnote{\n        \\href{https://adindex.ru/news/researches/2017/03/16/158635.phtml}\n        {https://adindex.ru/news/researches/2017/03/16/158635.phtml}  \n    }.\n\n    По~данным компании «Медиаскоп»\\index{TNS}\\footnote{\n        Медиаскоп~— международная исследовательская группа,\n        занимающаяся изучением аудитории СМИ в России.\n        Официальный сайт: \\href{http://mediascope.net}{mediascope.net}.\n    },\n    просмотр видео~— второй по~популярности\n    вид деятельности после социальных сетей \\cite{Henni:2013}.\n    В~2012, он занимал около~10\\% от~общего \n    времени проведенного в~Интернете. \n    В январе 2017 года~— уже 30\\%.\n\n\n    По данным компании Cisco\\footnote{\n        Cisco—американская транснациональная компания, разрабатывающая и продающая сетевое оборудование, предназначенное в основном для крупных организаций и телекоммуникационных предприятий.\n    }, к 2019 году интернет-видео составит 80\\% \n    от мирового интернет-трафика\\footnote{\n        Cisco Visual Networking Index: \n        Forecast and Methodology, 2016–2021.\n        Updated:September 15, 2017\n        Document ID:1465272001663118\n        https://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/complete-white-paper-c11-481360.html\n    }.\n\n    \\begin{figure}[H]\n        \\includegraphics[width=\\textwidth]\n            {.local/vec/out/pdf/video-marker-future.pdf}\n        \\caption{Ретроспектива и~прогноз \n            развития российского рынка онлайн-видео\n            в~2012—2018 годах. Данные взяты из~работы \n            \\cite{Henni:2013}\n        }\n        \\label{fig:video-marker-future}\n    \\end{figure}\n\n\n    Обычные СМИ осваивают Интернет и~предоставляют свою продукцию\n    потребителям веб-приложений и~сервисов.\n    Музыкальные клипы публикуются \n    на~официальных каналах в~YouTube\\footnote{\n        YouTube — видеохостинг, предоставляющий \n        услуги хранения, доставки и показа видео. \n        Официальный сайт: \\href{https://www.youtube.com/}{youtube.com}.\n    }.\n    Телевизионные программы транслируются на~сайтах телекомпаний.\n    Трейлеры фильмов, в~том числе еще~не~вышедших в~прокат,\n    предварительное размещаются  на~тематических сайтах.\n\n    Быстрый рост видеоприложений\n    и~услуг впоследствии приводит к~росту онлайн-видео,\n    как~отмечено в~работах \\cite{Tan:2009, Shen:2005, Wu:2007a}.\n\n\n    \\subsection{Рост количества нечётких дубликатов}\n\n    Издатели, пользователи и~сторонние организации часто редактируют\n    и~публикуют копии оригинального видео.\n    Сходные видео, на~которых изображено одно и~то~же событие,\n    могут быть приобретены и~опубликованы многократно.\n\n    Все эти явления способствуют существенному росту процента\n    нечетких дубликатов видео в~Интернете.\n    Количество дубликатов достигает 93\\% выдачи\n    по~некоторым поисковым запросов \\cite{Wu:2007a}.\n\n    Большое количество нечётких дубликатов \n    видео предъявляет высокие требования\n    к~их~поиску.\n%     Поиск нечетких дубликатов видео применяют для\n%     \\begin{enumerate}\n\n\n        \n    % Это важно для~многих сфер применения,\n    % таких как~обнаружение нелицензионных копий,\n    % видеонаблюдение, ранжирование \n    %Интернет-видео, видео рекомендация, и~т.~д.\n\n    %В~следующих разделах мы~опишем ряд сценариев подробнее\n    %и~покажем как~поиск НДВ формирует базу для~некоторых областей,\n    %упомянутых ранее.\n\n\\end{document}\n\n",
+			"file": "src/thesis-text/what-for/problem.tex",
+			"file_size": 7330,
+			"file_write_time": 131581280018208777,
+			"settings":
+			{
+				"buffer_size": 4742,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Области применения поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n\n    \\section{Области применения поиска нечетких дубликатов видео}\n\n    \\begin{shiftdownsection}\n        \\relimport{reranking}\n        \\relimport{recommendations}\n        \\relimport{news-thread-tracking}\n\n        \\relimport{copyright}\n        \\relimport{monitoring}\n        \\relimport{cctv}\n\n    \\end{shiftdownsection}\n\n\\end{document}\n\n",
+			"file": "src/thesis-text/what-for/apps/__init__.tex",
+			"file_size": 727,
+			"file_write_time": 131581338736688679,
+			"settings":
+			{
+				"buffer_size": 607,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Проблема поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n\n    \\pagebreak\n\n    \\section{Поиск шаблонов действий}\n\n    За 20-30 лет человечество накопило большое \n    количество видео c камерах наружного наблюдения.\n    Этот массив информации невозможно просмотреть целиком.\n    Эффективных методов анализа видео, \n    подобных анализу текста, в настоящее время нет. \n\n    Для камер наружного наблюдения есть потребность искать \n    заданные шаблоны явлений в кадре. \n    Например, для систем безопасности актуальны шаблоны \n    «человек подходит к двери и открывает ее». \n    В реалистичной ситуации человек подходит \n    к двери с различных углов. \n    В кадре могут оказаться проезжающие мимо машины, \n    падающие листья, различные погодные явления.\n\n    Практика показывает, что детекторы движения \n    будут ловить скорее листья и машины, \n    а не искомый шаблон поведения.\n\n    Если в таком видео искать не движения, \n    а значимые события, то количество ложных срабатываний \n    можно свести к минимуму. Если в области обзора камеры \n    появился новый объект, которого раньше не было, \n    характеристики кадров видео изменятся. \n    Считаем, что произошло событие. \n    Если в области обзора оказались колышущиеся ветки \n    — то каждое движение веток тоже можно считать событием. \n    Но кадры с ветками до движения и во время движения \n    будут отличаться меньше. \n    Значимость события можно настроить \n    параметрами определения смены сцен. \n\n    Шаблоны «человек подходит к двери и открывает ее» \n    и «человек подходит к двери, стоит несколько секунд и уходит» \n    — разные шаблоны. Их нужно отличать. \n    Классические детекторы движения отличать такое не умеют.\n\n    С видеокамерами связано еще одно приложение. \n    Последнее время стали широко применяться \n    бытовые БПЛА («квадрокоптеры»). Обычно они оснащены камерами. \n    Такие малые летальные аппараты очень часто используются\n    фотографами для создания снимков с удобных или неожиданных ракурсов. \n    Кроме того, «квадрокоптеры» используют путешественники \n    для проверки нового маршрута. \n    Похожие технологии начали применять \n    в геодезии и при составлении карт. \n    Для автоматической и полуавтоматической навигации \n    БПЛА тоже требуется поиск шаблонов. \n    Например, «пролетели над рекой, потом пролетели над дорогой». \n\n\\end{document}",
+			"file": "src/thesis-text/what-for/apps/cctv.tex",
+			"file_size": 4340,
+			"file_write_time": 131581339536565062,
+			"settings":
+			{
+				"buffer_size": 2541,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Проблема поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n\n    \\section{Защита авторских прав}\n\n    Количество видео размещенного в Интернете стремительно растет.\n    Согласно данным Statista\\footnote{\n        Statista~— немецкая компания, занимающаяся\n        сбором и анализом данных о развитии различных сфер мировой\n        и региональных экономик.  \n    } в мае 2017 года только пользователи YouTube загружали \n    1 миллиард часов видео каждый день\\footnote{\n        https://www.statista.com/topics/2019/youtube/\n    }.\n    Большая часть этих видео~— оригинальные материалы,\n    снятые самими пользователями.\n    Однако среди них были и незаконные «пиратские» копии лицензионных видео.\n    При этом копии может отличаться от оригинала\n    набором различных параметров, таких \n    как~разрешение, контраст, яркость, субтитры,\n    частота кадров, последовательность сцен, или~содержать\n    дополнительные изображения и т.д.\n    Перебрать все варианты модификаций \n    и сравнить видео как бинарные строки невозможно.\n    Заранее не известно какие изменения могут быть \n    внесены в~исходное видео.\n\n    YouTube~— не единственный сервис в Интернете, \n    позволяющий загружать пользовательское видео.\n    Кроме того, существует большое количество сайтов,\n    которые изначально были созданы \n    для трансляции украденных материалов.\n\n    Для таких сервисов как YouTube,\n    проблема «пиратских» копий решается \n    с помощью нечетких дубликатов.\n    Однако на практике незаконные \n    материалы чаще ищутся вручную.\n\n    Для автоматического поиска копий требуется:\n    \\begin{itemize}\n        \\item   построить базу данных лицензионных видео;\n        \\item   для каждого загруженного видео вычислять \n                сходство с лицензионными.\n    \\end{itemize}\n    Размеры такой базы данных и скорость \n    поиска по ней зависят от количества видео.\n    Объем загружаемых материалов,\n    делает задачу поиска копий очень затратной. \n\n    Потому от алгоритмов поиска нечётких дубликатов\n    требуется высокая скорость и низкая вычислительная сложность. \n\n    Защита авторских прав~— наиболее востребованная \n    область применения поиска нечётких дубликатов видео\n    \\cite{Assent:2009, Cherubini:2009, Shen:2007, Law-To:2007}.\n\n\\end{document}\n",
+			"file": "src/thesis-text/what-for/apps/copyright.tex",
+			"file_size": 4004,
+			"file_write_time": 131581264400233802,
+			"settings":
+			{
+				"buffer_size": 2451,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Проблема поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n\n    \\section{Группировка новостей}\n\n    Как~показано в~работе \\cite{Zhao:2007}, \n    поиск нечётких дубликатов удобно использовать для~просмотра\n    видео-материалов о~событиях, размещенных в~разных СМИ.\n    Видео часто показывают очень похожие визуальные изображения и~ролики,\n    но~с~совершенно различной трактовкой.\n\n    На рисунках~\\ref{fig:news-thread-tracking-unarmed-civilians},\n    \\ref{fig:news-thread-tracking-residents} и\n    \\ref{fig:news-thread-tracking-forces} \n    показаны примеры трёх различных трактовок одного \n    и того же видео-материала на различных новостных сайтах.\n    \\begin{enumerate}\n        \\item Рисунок~\\ref{fig:news-thread-tracking-residents},\n            трактовка новостного портала\n            \\href{http://rt.com}%\n            {rt.com}\\footnote{\n                Материал взят со страницы \n                \\href{https://www.rt.com/news/157456-ukraine-soldiers-compensation-odessa/}%\n                {https://www.rt.com/news/157456-ukraine-soldiers-compensation-odessa/}.\n                Полную копию можно найти на странице\n                \\href{http://darkroom.baltimoresun.com/2014/05/table-tennis-kettling-and-results-of-a-mine-collapse-may-2/topshots-ukraine-russia-politics-crisis-slavyansk/}%\n                {http://darkroom.baltimoresun.com/2014/05/table-tennis-kettling-and-results-of-a-mine-collapse-may-2/topshots-ukraine-russia-politics-crisis-slavyansk/}.\n            }.\n            \\begin{description}\n                \\item Комментарий:\\textit{\n                    \\begin{english}\n                        ``Residents gather to speak \n                        to Ukrainian soldiers\n                        at a checkpoint which they s\n                        eized in~the~early morning\n                        in~the~village of~Andreevka,\n                        7 kms from~the~centre \n                        of~the~southern Ukrainian city of~Slavyansk,\n                        on~May 2, 2014.''\n                    \\end{english}\n                }\n                \\item Перевод:\\textit{\n                    «Местные жители собираются,\n                    чтобы поговорить с~украинскими \n                    военными на~блокпосту,\n                    который те захватили утром в~селе Андреевка,\n                    7~км от~центра Славянска, 2 мая 2014 года.»\n                }\n            \\end{description}\n        \\item Рисунок~\\ref{fig:news-thread-tracking-unarmed-civilians},\n            трактовка политического сайта\n            \\href{http://www.eyeopening.info}%\n            {eyeopening.info}\\footnote{\n                Материал взят со страницы \n                \\href{http://www.eyeopening.info/2014/05/04/images-video-east-ukraine-corporate-media-will-never-show/ukraine-confict-f}%\n                {http://www.eyeopening.info/2014/05/04/images-video-east-ukraine-corporate-media-will-never-show/ukraine-confict-f}.\n            }.\n            \\begin{description}\n                \\item Комментарий:\\textit{\n                    \\begin{english}\n                        ``Unarmed civilians put themselves\n                        in~the~path of~armored vehicles \n                        in~their attempt to~stop\n                        the~Ukrainian military \n                        from~entering Slavyansk.''\n                    \\end{english}\n                }\n                \\item Перевод:\\textit{\n                    «Безоружные мирные граждане \n                    встали на~пути бронетехники\n                    и~пытаются остановить украинских \n                    военных при~входе в~Славянск»\n                }.\n            \\end{description}\n        \\item Рисунок~\\ref{fig:news-thread-tracking-forces},\n            трактовка новостного сайта \n            \\href{http://ewn.co.za}%\n            {ewn.co.za}\\footnote{\n                Материал взят со страницы \n                \\href{http://ewn.co.za/2014/07/01/Ukraine-forces-attack-rebel-positions}\n                {http://ewn.co.za/2014/07/01/Ukraine-forces-attack-rebel-positions}.\n            }.\n            \\begin{description}\n                \\item Комментарий:  \\textit{\n                    \\begin{english}\n                        ``Ukrainian~forces struck \n                        at pro-Russian separatist\n                        bases in~eastern regions on~Tuesday.''\n                    \\end{english}\n                }\n                \\item Перевод:  \\textit{\n                    «Во~вторник украинские вооруженные \n                    силы нанесли удар по~базам \n                    пророссийских сепаратистов \n                    в~восточных регионах страны.»\n                }\n            \\end{description}\n    \\end{enumerate}\n\n\n    СМИ, поддерживающие противоположные позиции,\n    могут описать ситуацию по-разному,\n    но~визуальное содержание, всего скорее, будет близким.\n    Часто в качестве новости сообщатся не набор фактов,\n    а частное мнение автора сюжета.\n    Обнаружение и~группировка таких материалов позволят\n    получать более полное представление о~происходящем\n    с~учетом различных точек зрения.\n\n    \\begin{figure}[H]\n        \\vspace{2em}\n        \\includegraphics[width=\\textwidth]%\n            {.local/img/video/apps/news-thread-tracking-ua-4.png}%\n        \\caption{%\n            Пример подачи визуальной информации с сайта\n            \\href{http://rt.com/}{rt.com}\n        }\n        \\label{fig:news-thread-tracking-residents}\n    \\end{figure}\n\n    \\clearpage\n\n\n    \\begin{figure}[H]\n        \\vspace{4em}\n        \\includegraphics[width=\\textwidth]%\n            {.local/img/video/apps/news-thread-tracking-ua-1.png}%\n        \\caption{%\n            Пример подачи визуальной информации c сайта \n            \\href{http://www.eyeopening.info/}%\n            {eyeopening.info}\n        }\n        \\vspace{4em}\n        \\label{fig:news-thread-tracking-unarmed-civilians}\n        \\includegraphics[width=\\textwidth]%\n            {.local/img/video/apps/news-thread-tracking-ua-3.png}%\n        \\caption{%\n            Пример подачи визуальной информации с сайта \n            \\href{http://ewn.co.za}{ewn.co.za}\n        }\n        \\label{fig:news-thread-tracking-forces}\n    \\end{figure}\n\n    \\clearpage\n\n\n\n    % \\begin{figure}\n    %     \\includegraphics[width=14cm]{.local/img/video/apps/video-thread-tracking-1-russia.png}%\n    %     \\caption{Видео, в~котором беспорядки в~Греции выданы,\n    %         за~акцию протеста в~Москве.\n    %         Заголовок:~«Protester's Express Outrage\n    %         Ove.russian Elections~— Fox News».\n    %         Перевод:~«Негодование протестующих из-за~результатов российских\n    %         выборов~— Фокс-Ньюc»\n    %     }\n    % \\end{figure}\n\n\n\\end{document}",
+			"file": "src/thesis-text/what-for/apps/news-thread-tracking.tex",
+			"file_size": 8560,
+			"file_write_time": 131581277452739554,
+			"settings":
+			{
+				"buffer_size": 6880,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Проблема поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n\n    \\section{Мониторинг эфира}\n\n    Отслеживать видео по его содержимому \n    требуется не только для материалов, \n    размещенных в различных библиотеках видео.\n    Аналогичная проблема стоит перед телеканалами.\n\n    Особенно остро стоит проблема поиска \n    и замены эфирной рекламы \\cite{Huang:2010b,Tan:2009,Yan:2008}.\n    Для обеспечения максимального продающего эффекта\n    реклама должна показываться с~правильной частотой,\n    в~течение ожидаемого периода времени.\n\n    Кроме того, с середины 2010-х годов \n    многие крупные каналы начали транслировать \n    свои видео-потоки через Интернет. \n    Это сильно усложнило задачу мониторинга эфира. \n\n    Контроль локальных эфиров государственных каналов\n    чаще всего осуществляется вручную.\n    Для интернет-вещания какой-либо \n    контроль обычно и~вовсе отсутствует.\n    И этим активно пользуются сайты,\n    которые паразитируют на телевизионных эфирах.\n\n    При~таких обстоятельствах для~мониторинга потока видео могут\n    быть использованы методы обнаружения нечетких дубликатов.\n    Когда искомый материал появится в~эфире, \n    методы обнаружения дубликатов смогут обнаружить \n    его возникновение и~сделать соответствующую запись.\n    Таким образом можно будет проконтролировать количество показов,\n    время показа, частоту и~другие параметры.\n\n    % На~практике для~интернет-видео проблема решается гораздо проще.\n    % Плеер, показывающий целевое видео, получает рекламу отдельно\n    % и~отдельно ее проигрывает. Само целевое видео при~этом останавливается.\n    % По~определенным событиям плеер отсылает некоторые запросы:\n    % клик, начало показа, четверть показа, половина показа и~т.~д.\n    % Эти запросы могут отсылаться в~том числе и~на~ресурс компании-заказчика.\n    % Таким образом, поиск НДВ\n    % не~является необходимым в~данном случае.\n    % Нужно отметить, что~такой подход не~будет работать с~онлайн-трансляциями\n    % телевизионных передач и~некоторыми другими видами потокового вещания.\n\n\n\\end{document}",
+			"file": "src/thesis-text/what-for/apps/monitoring.tex",
+			"file_size": 3818,
+			"file_write_time": 131581196445283088,
+			"settings":
+			{
+				"buffer_size": 2249,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Проблема поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n\n    \\section{Системы рекомендаций}\n\n    Многие сервисы в~Интернете используют рекомендательные системы,\n    которые пытаются предсказать, какие объекты (музыка, книги, новости)\n    будут интересны пользователю.\n    Если зрителю понравился фильм,\n    он~будет интересоваться и~похожими фильмами \\cite{Cherubini:2009},\n    т.~е. нечеткими дубликатами этого фильма.\n    Используя эту особенность, библиотеки видео\n    могут более точно подстраиваться под предпочтения зрителя.\n\n    Тем не~менее, текущие системы рекомендаций,\n    как~правило, используют только текстовую информацию:\n    названия, комментарии, описания и~другие метаданные.\n    Т.~к. абсолютно разные видео могут иметь похожие описания,\n    то текстовый подход вносит значительный шум. \n    Пример неудачной рекомендации сервиса YouTube показан\n    на рисунке \\ref{fig:video-recommendation}.\n    На основе просмотра сюжета про падение Челябинского метеорита\\footnote{\n        Челябинский метеорит~— космическое тело, \n        которое упало на земную поверхность \n        15 февраля 2013 года.\n        Наиболее крупные фрагменты метеорита были найдены \n        на дне озера Чебаркуль в Челябинской области.\n    } зрителю были предложены не релевантные \n    сюжеты про электричку «Миасс-Челябинск»\n    и про рыбную ловлю на озере Чебаркуль.\n    \n    \\begin{figure}[H]\n        \\includegraphics[width=0.7\\textwidth]%\n            {.local/img/video/apps/video-recommendation.png}\n        \\caption{Пример ошибочной рекомендации видео}\n        \\label{fig:video-recommendation}\n    \\end{figure}\n\n    Анализ содержимого видео \n    и применение методов поиска нечётких дубликатов \n    в~таких системах может увеличить точность рекомендаций.\n    Для~этого достаточно сопоставлять текстовую \n    информацию с~самим видео \\cite{Cherubini:2009}.\n    При этом предполагается, что некоторых исходный набор \n    видео должен быть заранее размечен.\n    Смысловую информацию в видео могут добавлять\n    пользователи сервиса. В работе \\cite{Zhao:2010} предлагают \n    мотивировать пользователей с помощью элементов социальных сетей.\n\n\\end{document}\n",
+			"file": "src/thesis-text/what-for/apps/recommendations.tex",
+			"file_size": 3779,
+			"file_write_time": 131581280718754026,
+			"settings":
+			{
+				"buffer_size": 2353,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\title[NDVR thesis-abstract]{%\n    Проблема поиска нечетких дубликатов видео%\n}\n\n\\begin{document}\n\n    \\section{Ранжирование результатов поиска}\n\n    Обычно в~поисковой выдаче требуется группировать \n    одинаковые видео по~одним и~тем~же ключевым словам запроса.\n    Но чаще всего поисковые машины возвращают список дубликатов.\n    На рисунках~\\ref{fig:video-reranking-mailru},\n    \\ref{fig:video-reranking-yandex},\n    \\ref{fig:video-reranking-vk} и\n    \\ref{fig:video-reranking-youtube} \n    показаны примеры неудачного ранжирования результатов\n    для различных сервисов интернет-видео. \n    \n    \n    \\begin{figure}[htp]\n        \\includegraphics[width=0.8\\textwidth]{.local/img/video/apps/video-reranking-mailru.png}\n        \\caption{\n            Неудачное ранжирование при~поиске «Faszination~Korallenriff~(2011)».\n            Сервис Mail.ru.\n        }\n        \\label{fig:video-reranking-mailru}\n        \\vspace{2em}\n        \\includegraphics[width=0.8\\textwidth]{.local/img/video/apps/video-reranking-yandex.png}\n        \\caption{\n            Неудачное ранжирование при~поиске «Faszination Korallenriff (2011)».\n            Сервис Яндекс.\n        }\n        \\label{fig:video-reranking-yandex}\n    \\end{figure}\n\n    \\begin{figure}[htp]\n        \\includegraphics[width=0.8\\textwidth]{.local/img/video/apps/video-reranking-vk.png}\n        \\caption{\n            Неудачное ранжирование при~поиске «Faszination~Korallenriff~(2011)».\n            Сервис Вконтакте (\\href{http://vk.com/}{vk.com}).\n        }\n        \\label{fig:video-reranking-vk}\n        \\vspace{2em}\n        \\includegraphics[width=0.8\\textwidth]{.local/img/video/apps/video-reranking-youtube.png}\n        \\caption{\n            Ранжирование при~поиске «Faszination~Korallenriff~(2011)».\\\\\n            Сервис YouTube.\n        }\n        \\label{fig:video-reranking-youtube}\n    \\end{figure}\n\n    \\noindent\n    Качество поисковой выдачи можно улучшить тремя способами.\n    \\begin{enumerate}\n        \\item   Оставить в поисковой выдачи только \n                самые свежие копии видео.\n        \\item   Удалить нечётки дубликаты \n                из~верхней части списка \\cite{Wu:2007a}.\n        \\item   Сгруппировать оригинальные видео \\cite{Huang:2010a}.\n    \\end{enumerate}\n\n    В~первом и во втором случае новизна результатов\n    в~рейтинговом списке значительно увеличится.\n    В~то~же время, видео, которое интересовало пользователя,\n    может быть расположено слишком далеко от~начала страницы.\n    Похожие видео могут потребоваться пользователям как~дополнительный\n    источник информации.\n    Например, видео в~конкретном разрешении и~форматах,\n    с~различными субтитрами, аудио и~пр.  \\cite{Cherubini:2009}\n\n    Во~третьем случае описанной проблемы нет.\n    Новые результаты просто можно выделить тем или~иным образом.\n    Для всех трёх вариантов требуется эффективный поиск\n    нечётких дубликатов видео.\n\n\\end{document}",
+			"file": "src/thesis-text/what-for/apps/reranking.tex",
+			"file_size": 4244,
+			"file_write_time": 131581280320021039,
+			"settings":
+			{
+				"buffer_size": 3050,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "%& -shell-escape\n% !TeX root = thesis-text.tex\n% !TeX encoding = UTF-8\n% !TeX program = XeLaTeX\n\n\\documentclass{.local/lib/classes/ndvr-super-article-standalone}\n\n\\begin{document}\n\n    % В~течение прошлого десятилетия наблюдался стремительный рост\n    % количества видео материалов размещаемых в~Интернете.\n    % Вместе с~тем увеличивалось и~вовлечение пользователей\n    % в~процесс размещения видео.\n    %\n    % Значительно увеличилось время пользователя,\n    % затраченное на~редактирование, загрузку, поиск и~просмотр видео,\n    % Массовая публикация и~обмен информацией породили большое\n    % количество нечетких дубликатов видео.\n\n\n    Начиная с середины 2000-х годов в Интернете\n    стало появляться много видео с~очень схожим содержанием видео.\n    Такие видео называют почти-дубликатами\n    (калька с~английского термина «near duplicate»), полудубликатами,\n    неполными или~нечеткими дубликатами.\n    Мы будем придерживаться термина «нечеткие дубликаты».\n    Слово «нечеткий» в данном случае означает частичное совпадение\n    оригинала и дубликата.\n\n    Задача эффективной идентификации нечетких дубликатов играет ключевую\n    роль в~задачах поиска, защите авторских прав, и~многих других.\n\n    Последние годы достигнуты серьезные успехи в~поиске нечетких дубликатов,\n    выделение низкоуровневых признаков, генерации сигнатур и~индексации видео.\n\n    % В~статье сравниваются существующие варианты\n    % определения нечетких дубликатов видео (НДВ),\n    % рассматриваются работы по~поиску нечетких дубликатов видео,\n    % общие рамки проблемы, современные методы и~появляющиеся тенденции.\n\n\\end{document}\n",
+			"file": "src/thesis-text/what-for/abstract-ru.tex",
+			"file_size": 2739,
+			"file_write_time": 131580749167951654,
+			"settings":
+			{
+				"buffer_size": 1613,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n\n\\section{Подходы к определению понятия НДВ}\n\nТема поиска НДВ относительно нова для~научного сообщества.\nИ~потому существует целый ряд различных толкований и~определений.\nНаиболее употребляемые определения\nВу \\cite{Wu:2007a}, Шена \\cite{Shen:2007},\nБашарата \\cite{Basharat:2008}, и~Керубини \\cite{Cherubini:2009},\nпредставленные далее, относятся к~одному и~тому~же.\n\n\\subsection{Нечеткие дубликаты по~Ву}\n\nНечеткие дубликаты видео~— идентичные или~приблизительно идентичные видео,\nпочти точные копии друг друга,\nно~отличающийся\n    форматами файлов,\n    параметрами кодирования,\n    светоизмерительными параметрами (цветность, яркость),\n    применением монтажа (титры, логотип, рамка),\n    длиной\n    и~набором модификаций (вставка или~удаление кадров) \\cite{Wu:2007a}.\n\n% \\begin{figured}\n%     \\import{vec/}{ndv-drone-definition-1-wu}\n%     \\caption{\n%         Иллюстрация определения НДВ по~Ву \\cite{Wu:2007a}.\\\\\n%         В~верхнем левом углу~— оригинал изображения.\n%     }\n% \\end{figured}\n\n\n\\subsection{Нечеткие дубликаты по~Шену}\n\nНечеткие дубликаты видео~— клипы,\nкоторые похожи или~почти дублируют друг от~друга, но~выглядят по-разному.\nОни~отличаются в~силу\n    разных условий съемки\n        (точка обзора и~настройки камеры, условия освещения,\n        фон, передний план, и~т.~д.),\n    преобразований\n        (формат видео, частота кадров, разрешение, сдвиг, обрезка, гамма, контраст,\n        яркость, насыщенность, размытие, выдержка, резкость и~т.~д.),\n    операции монтажа\n        (вставка, удаление, перемена мест кадров и~модификация содержимого)\n    \\cite{Shen:2007}.\n\n% \\begin{figured}\n%     \\import{vec/}{ndv-drone-definition-2-shen}\n%     \\fcaption{\n%         Иллюстрация определения НДВ по~Шену \\cite{Shen:2007}.\\\\\n%         В~верхнем левом углу~— оригинал изображения.\n%     }\n% \\end{figured}\n\n\n\\subsection{Нечеткие дубликаты по~Башарату}\n\nНечеткие дубликаты видео~— изображение того~же эпизода\n(например, «беспилотный летательный аппарат в~воздухе») при~различных точках обзора,\nразмерах видео, ландшафте, погодных условиях, моделях БПЛА и~движениях камеры.\nОдна и~та~же смысловая концепция может\nбыть выражена в~различной форме, при~разном освещении,\nи~параметрах сцены \\cite{Basharat:2008}.\n\n\n% \\begin{figured}\n%     \\import{vec/}{ndv-drone-definition-3-basharat}\n%     \\fcaption{\n%         Иллюстрация определения НДВ по~Башарату \\cite{Basharat:2008}.\\\\\n%         В~верхнем левом углу~— оригинал изображения.\n%     }\n% \\end{figured}\n\n\n\\subsection{Нечеткие дубликаты по~Керубини}\n\nНечеткие дубликаты видео~— приблизительно одинаковые видео,\nкоторые могут отличаться параметрами кодирования,\nсветоизмерительными параметрами (цветность, яркость),\nприменением монтажа (титры, логотип), или~наложением  аудио.\nИдентичные видео с~соответствующей дополнительной информацией,\nв~любом из~них (изменения длины клипа или~сцен) рассматриваются как~НДВ.\nДва различных видео с~разным представлением и~сценарии,\nсчитают НДВ, если они~используют одинаковую семантику,\nи~ни~одного из~них нет~дополнительной информации \\cite{Cherubini:2009}.\n\n% \\begin{figured}\n%     \\import{vec/}{ndv-drone-definition-4-cherubini}\n%     \\fcaption{\n%         Иллюстрация определения НДВ по~Керубини \\cite{Cherubini:2009}.\\\\\n%         В~верхнем левом углу~— оригинал изображения.\n%     }\n% \\end{figured}\n\n\\subsection{Сравнение определений}\n\n\nВ~целях вовлечения психофизического восприятия в~определение НДВ,\nКерубини и~соавторы \\cite{Cherubini:2009} сделали масштабный интернет-опрос.\nРезультаты этого опроса показывают, что~именно конечные пользователи\nсчитают нечеткими дубликатами.\nЧеловеческое восприятие НДВ отвечает\nмногим свойствам формального определения\nотносительно манипуляций с~визуальным содержанием\n\\cite{Wu:2007a}, \\cite{Shen:2007}.\n\nЕсли в~сходные отрывки внесена дополнительная информация,\nто с точки зрения испытуемых, \nони~уже не~воспринимаются как~нечеткие дубликаты.\nС~другой стороны, два разных видео с~различными героями\nпри~различных сценариях оценены как~дубликаты, т.~к. они~имеют общий смысл,\nпри~условии, что~ни~один из~роликов не~имеет дополнительной информации.\n\nИсследование подтверждает, что~пользователи считают НДВ,\nвидео, которые визуально подобны и~семантически идентичны.\nЭто не~совпадает обычным поиском по~содержимому,\nт.~к. сходство контента является \nединственным фактором, который нужно учитывать.\nА~в~случае с~пользовательским определением необходимо проверять\nи~семантику и~ее представление.\n\n\nСамое узкое определение дано в~работе Ву и~др.,\nТолько идентичные и~приблизительно идентичные видео\nдля~одного того~же сюжета с~незначительными фотографическими различиями\nи~правками расценены как~НДВ.\nФормально это определение совпадает\nс~понятием «видео-копии» в~работе \\cite{Law-To:2007}\nВидео-копией в~работе названы отрывки, идентичные по~смыслу,\nно~отличающиеся светоизмерительными или~геометрическими характеристиками.\n\nВ~работе Шена и~др. \\cite{Shen:2007} определение НДВ распространяется\nна~фильмы с~одинаковой смысловой концепцией, но~снятые при~разных условиях.\n\nБашарат и~др. \\cite{Basharat:2008}  \nпредлагают еще~более общее определение.\nНДВ являются видео, изображающие одно и~то~же смысловое явление\nпри~определенных обстоятельствах.\n\n\nНа~данный момент до~сих пор не~существует единого\nопределения нечетких дубликатов видео.\nЧаще всего в~работах используется определения Ву  и~Шена.\nОднако определения сводятся, к~тому, что~НДВ должны нести очень\nблизкую визуальную информацию, выражающих одинаковый смысл.\n\nПоэтому поиск НДВ может быть расценен как~мост\nмежду~традиционным поиском основанным на~подобии содержимого\n(у~видео должно быть подобное визуальное\nпредставление независимо от~семантики)\nи~смысловым видео-поиском\n(у~видео должна быть соответствующая\nсемантика независимо от~представления).\n\n\\subsection{Смежные понятия}\n\nСуществует несколько различных понятий:\nчастичные нечеткие дубликаты, нечеткие дубликаты, копии, и~полные дубликаты.\nДля~поиска во~всех этих случаях используют сходные подходы,\nхотя цели поиска каждого понятия разные.\nНиже приведено краткое пояснение для~каждого их них.\n\nПолные дубликаты семантически и~визуально идентичны с~исходным видео,\nОни~имеют в~точности одинаковый сюжет, сценарий  и~т.~д.\n\nКопии совместно используют ту~же семантику и~сцены что~и~оригинал,\nно~отличаются визуальным представлением.\nКопии могут быть получены в~результате разнообразных преобразований и~правок.\nВ~эту категорию попадают видео с~изменениями в~цвете,\nяркостью, контрасте, частотой кадров, и~т.~д.,\nили~с~добавлением баннеров, логотипов, и~т.~д.,\nТаким образом, они~выражают в~точности одинаковые сюжет и~сцены,\nно~с~визуальными различиями.\nНапример, проект TRECVID \\cite{Over:2011} определяет копию, как\n«сегмент видео, полученный из~другого видео,\nкак~правило, с~помощью различных преобразований,\nтаких как~дополнение, удаление, модификация\n(ориентации, цвета, контраста, кодирование),\nперезапись и~т.~д.\nДля~задачи обнаружения копий на~основе \nсодержимого TRECVID 2011 выделил восемь\nтрансформаций в~том числе\nимитации аналоговой перезаписи,\nкартинка в~картинке,\nвставка рисунка,\nповторное кодирование,\nизменение гаммы,\nснижения качества,\nкомпоновка,\nи~комбинации из~трех случайно выбранных преобразований.\n\nНечеткие дубликаты используют одну и~ту~же семантику,\nно~их внешний вид может немного отличаться.\nДопускается незначительное рассогласование по~времени.\n\nЧастичные нечеткие дубликаты, обычно имеют большое семантическое\nи~визуальное несоответствие на~уровне целых видео.\nОни~совместно используют похожие (нечетко дублирующихся) отрывки друг друга,\nили~даже области отдельных изображений.\nНапример, два длинных видео с~совершенно разными сюжетами\nно~со~сходными фрагментами или~областями включая\nизображения в~одинаковых местах повествования.\n",
+			"file": "src/thesis-text/what-for/defs.tex",
+			"file_size": 13438,
+			"file_write_time": 131580425361307346,
+			"settings":
+			{
+				"buffer_size": 7713,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Makefile",
+			"settings":
+			{
+				"buffer_size": 4359,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 172.0,
+		"last_filter": "Package Control: dis",
+		"selected_items":
+		[
+			[
+				"Package Control: dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: dele",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: is",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 503.0
+	},
+	"console":
+	{
+		"height": 210.0,
+		"history":
+		[
+			"ls",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib/classes",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib/classes/base",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib/deps",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib/styles",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib/styles/fonts",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib/styles/math",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src/thesis-text",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src/thesis-text/ndvr-problem",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src/thesis-text/ndvr-problem/what-for"
+	],
+	"file_history":
+	[
+		"/usr/share/applications/sublime_text.desktop",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/lib/index.ist",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src/thesis-text/glossary/__init__.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src/thesis-text/what-for/apps/recomendations.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src/thesis-text/what-for/apps/tracking.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/src/thesis-text/what-for/apps.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-text/thesis-text/vec/source/video/video-marker-future.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/source/video/sequence/video-sequence.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/events/__init__.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/__init__.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/survey/signatures.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/survey/video-models.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/source/video/model/dfd/video-model-dfd-state.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/__init__.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/survey/__init__.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/practical-value.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/__init__.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/final-algorithm.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/bib/vak.bib",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/isax.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/isax/__init__.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/isax/isax-modification.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/isax/isax-index.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/isax/isax-paa.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/isax/isax-description.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/shot-descriptor.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search/relative-distance.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/intro.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/events/mean-sign-diff.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/events/ndv-theorem.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/events/shot-theorem.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/events/segmentation-method.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/events/methods.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/source/code.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/base/vector-image-standalone.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/base/vector-image.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/sources.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/events.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/relevance.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/goal.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/novelty.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/search.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/math/ams-math.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/lists.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/etc.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/results.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/hypers.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/structure.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/survey.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/pages.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/globals.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/datetime.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/base/any-document.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/bashline.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/video-temporal-uml-model.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/video-semantic-uml-model.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/video-logical-uml-model.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/base/super-article.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/source/video/model/uml/video-model-uml-temporal.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/source/video/model/uml/video-model-uml-semantic.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/math.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/titlepage.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/graphics.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/outro.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/Makefile",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/.latexmkrc",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/source/video/model/uml/video-model-uml-state.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/source/video/model/uml/video-model-uml-logical.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/texts.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/version.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/files.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/tables.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/.latexmkrc",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/.latexmkrc",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/video-logical-model.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/video-concept-model.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/what-for-tree.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/ndvr-super-article-standalone.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/ndvr-vector-image-standalone.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/Makefile",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/vec/what-for-tree-1.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/publications.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/ndvr-vector-image.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/base/super-article-standalone.cls",
+		"/home/w495/.config/sublime-text-3/Packages/LaTeXBox/README.md",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/Makefile",
+		"/home/w495/.config/sublime-text-3/Packages/BeautifyLatex/BeautifyLatex.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/LaTeXYZ/README.md",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/thesis-abstract.sublime-project",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/ndvr-super-article.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/base/base-super-document.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/bibliography/etc.bib",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/bibliography/vak.bib",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/sections.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/super-article.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/super-article-standalone.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/vector-image.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/classes/vector-image-standalone.cls",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/common.bib",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/bibliography.bib",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/method.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/bibliography/bibliography.bib",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/publications.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/lib/styles/biblio.sty",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/vak.bib",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/approbation.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/about.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/method.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/problem.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/content/part-1.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description/reliability.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/description.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/src/thesis-abstract/about-abstract.tex",
+		"/home/ndvr/Projects/thethis/active/thesis-abstract/thesis-abstract/thesis-abstract.log",
+		"/home/ndvr/Projects/thethis/big-survey-find/big-survey-find/big-survey-find.sublime-project",
+		"/home/w495/.config/sublime-text-3/Packages/User/DictionaryAutoComplete.sublime-settings",
+		"/home/ndvr/Projects/thethis/big-survey-find/big-survey-find/big-survey-find/glossary.tex",
+		"/home/ndvr/Projects/thethis/big-survey-find/big-survey-find/big-survey-find/state-of-art.tex",
+		"/home/w495/.config/sublime-text-3/Packages/DictionaryAutoComplete/DictionaryAutoComplete.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/KeyboardSpellCheck/KeyboardSpellCheck.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/Diction/Diction.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/AutoSpell/AutoSpell.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/GoogleDictionary/GoogleDictionary.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/User/KeyboardSpellCheck.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/User/GoogleDictionary.sublime-settings",
+		"/home/w495/.config/sublime-text-3/Packages/User/vocabulary.txt"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"missile",
+			"idxitem",
+			"indexHeadLetter",
+			"Online Video",
+			"Online Video in Russia",
+			" Continuous Content-",
+			"russian",
+			"date",
+			"},\n",
+			"russ",
+			"runss",
+			"},\n",
+			"видео-",
+			"нечет",
+			"нечёт",
+			"Нечет",
+			"НДВ",
+			"сема",
+			"НДВ",
+			"видео",
+			"видео-",
+			"видео-м",
+			"img",
+			"  ",
+			"fcaptionl",
+			"figured",
+			"img",
+			"fcaption",
+			"figured"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"drone",
+			"нечёт",
+			"Нечёт",
+			".local/img",
+			"caption",
+			"figure",
+			".local/img/video/apps",
+			".local/img/video/apps/",
+			"caption",
+			"figure"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/thesis-text.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/classes/base/any-document.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								275,
+								275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/TeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/classes/base/super-article.cls",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/TeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 308.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/tmp/mozilla_w4950/pgaas.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/tmp/mozilla_w4950/pgaas_add_user.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/tmp/mozilla_w4950/pgaas_add_user-1.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/thesis-text/ndvr-problem/__init__.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								451,
+								451
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/thesis-text/ndvr-problem/what-for/reranking.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2155,
+								2155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 792.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/thesis-text/ndvr-problem/what-for/news-thread-tracking.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								635,
+								635
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2046.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "bib/all.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 139656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43918,
+								43930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXTools/BibLaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 36456.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/thesis-text/ndvr-problem/what-for/recommendations.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								546
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/thesis-text/ndvr-problem/video-amount.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4489,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								662,
+								662
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "lib/styles/index.sty",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/TeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": ".latexmkrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 704,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								455
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Perl/Perl.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "src/thesis-text/ndvr-problem/.latexmkrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306,
+								306
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Perl/Perl.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "lib/index/multilingual.xdy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								964,
+								964
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "src/.latexmkrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Perl/Perl.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "src/thesis-text/ndvr-problem/what-for/copyright.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3,
+								3
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "src/thesis-text/ndvr-problem/what-for/monitoring.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								845,
+								845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 990.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "src/thesis-text/ndvr-problem/definitions.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								693,
+								693
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 550.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "lib/styles/fonts/xetex-fonts.sty",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1065,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								895,
+								895
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/TeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "src/thesis-text/ndvr-problem/what-for/cctv.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2573,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2051,
+								2031
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "src/thesis-text/publications.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								197,
+								197
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "src/thesis-text/what-for/what-for.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								576
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 45,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "src/thesis-text/what-for/__init__.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								430,
+								424
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "src/thesis-text/what-for/definitions.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7339,
+								7339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "vec/source/ndv/drone/ndv-drone-definition-1-wu.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 35,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "vec/source/ndv/drone/ndv-drone-definition-2-shen.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1405,
+								1405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 34,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "vec/source/ndv/drone/ndv-drone-definition-3-basharat.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 36,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "vec/source/ndv/drone/ndv-drone-definition-4-cherubini.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 37,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "vec/source/ndv/missile/ndv-missile-definition-1-wu.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 889,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 38,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "vec/source/ndv/missile/ndv-missile-definition-2-shen.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1540,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 33,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "vec/source/ndv/missile/ndv-missile-definition-3-basharat.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2907,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 40,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "vec/source/ndv/missile/ndv-missile-definition-4-cherubini.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 39,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "lib/classes/ndvr-super-article-standalone.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 581,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/TeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 43,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
+					"file": "lib/styles/sections.sty",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1335,
+								1335
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/TeX.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1386.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "src/thesis-text/what-for/.latexmkrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Perl/Perl.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 47,
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "src/thesis-text/what-for/problem.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3699,
+								3699
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 661.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 38,
+					"file": "src/thesis-text/what-for/apps/__init__.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								536,
+								536
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 39,
+					"file": "src/thesis-text/what-for/apps/cctv.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2541,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								387,
+								387
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 40,
+					"file": "src/thesis-text/what-for/apps/copyright.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2261,
+								2261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 858.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 44,
+					"type": "text"
+				},
+				{
+					"buffer": 41,
+					"file": "src/thesis-text/what-for/apps/news-thread-tracking.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5647,
+								5299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2574.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 42,
+					"file": "src/thesis-text/what-for/apps/monitoring.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								829,
+								829
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 132.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 43,
+					"file": "src/thesis-text/what-for/apps/recommendations.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								783,
+								783
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 132.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 41,
+					"type": "text"
+				},
+				{
+					"buffer": 44,
+					"file": "src/thesis-text/what-for/apps/reranking.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2027,
+								2027
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 924.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 42,
+					"type": "text"
+				},
+				{
+					"buffer": 45,
+					"file": "src/thesis-text/what-for/abstract-ru.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 46,
+					"file": "src/thesis-text/what-for/defs.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3293,
+								3053
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 46,
+					"type": "text"
+				},
+				{
+					"buffer": 47,
+					"file": "src/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 43.0
+	},
+	"input":
+	{
+		"height": 107.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "thesis-text.sublime-project",
+	"replace":
+	{
+		"height": 78.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 352.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

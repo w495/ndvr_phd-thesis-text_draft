@@ -11,8 +11,6 @@
 \LoadClass[14pt,a4paper,oneside,fleqn]{extarticle}
 
 
-
-
 \RequirePackage{.local/lib/styles/globals}
 
 \RequirePackage{.local/lib/styles/files}
